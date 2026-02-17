@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+
+<html class="light" lang="id"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Lumbu Hotel Landing Page</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#eca413",
+                        "background-light": "#f8f7f6",
+                        "background-dark": "#221c10",
+                        "charcoal": "#1a1a1a",
+                    },
+                    fontFamily: {
+                        "display": ["Plus Jakarta Sans", "sans-serif"],
+                        "sans": ["Plus Jakarta Sans", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        body { font-family: 'Plus Jakarta Sans', sans-serif; }
+        .glass-nav {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(10px);
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-charcoal selection:bg-primary selection:text-white">
+<!-- Navigation -->
+<header class="fixed top-0 w-full z-50 glass-nav border-b border-primary/10">
+<div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 bg-primary flex items-center justify-center rounded-lg">
+<span class="material-symbols-outlined text-white">apartment</span>
+</div>
+<h2 class="text-xl font-bold tracking-tight">Lumbu Hotel</h2>
+</div>
+<nav class="hidden md:flex items-center gap-8">
+<a class="text-sm font-semibold hover:text-primary transition-colors" href="#about">Tentang</a>
+<a class="text-sm font-semibold hover:text-primary transition-colors" href="#facilities">Fasilitas</a>
+<a class="text-sm font-semibold hover:text-primary transition-colors" href="#rooms">Kamar</a>
+<a class="text-sm font-semibold hover:text-primary transition-colors" href="#gallery">Galeri</a>
+<a class="text-sm font-semibold hover:text-primary transition-colors" href="#location">Lokasi</a>
+</nav>
+<div class="flex items-center gap-4">
+<button class="bg-primary text-white px-6 py-2.5 rounded-lg text-sm font-bold hover:bg-primary/90 transition-all shadow-lg shadow-primary/20">
+                    Pesan Sekarang
+                </button>
+</div>
+</div>
+</header>
+<main class="pt-20">
+<!-- Hero Section -->
+<section class="relative h-[85vh] w-full overflow-hidden flex items-center">
+<div class="absolute inset-0 z-0">
+<div class="absolute inset-0 bg-black/40 z-10"></div>
+<img alt="Lumbu Hotel Exterior" class="w-full h-full object-cover" data-alt="Modern luxury hotel facade with sunset lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDlHUqJhe8xkRkZPwfKONcqLYgFAyaU3pOwDpFGSoBKfDnmyYDH3X26-EmQQRoLj2FdvX2i8PkQYEOT-a-aeMFE6lf3YOvl_JvSj6NMxplW2OknUqPvEbUdzdC2cNKnXl76oA9hfbpkPf-fi9nB83D3X1MH7YMnMi8FkkGaeWJxuBFTVGXOlTWUHimEIZwbq_Lh4lCXd0FzfjhcR4cUuTA383wxDvddH1EDV4GB_Ia4n-K8qAfy97NdW8bO4njLAaONiSh9DeByZYoV"/>
+</div>
+<div class="relative z-20 max-w-7xl mx-auto px-6 w-full">
+<div class="max-w-2xl space-y-6">
+<h1 class="text-white text-6xl md:text-7xl font-extrabold leading-tight tracking-tighter">
+                        Lumbu <span class="text-primary">Hotel</span>
+</h1>
+<p class="text-white/90 text-xl font-medium max-w-lg leading-relaxed">
+                        Kemewahan Modern di Jantung Kalimantan. Rasakan perpaduan harmonis antara warisan budaya dan kenyamanan kontemporer.
+                    </p>
+<div class="flex flex-wrap gap-4 pt-4">
+<button class="bg-primary text-white px-8 py-4 rounded-lg font-bold text-lg hover:scale-105 transition-transform">
+                            Pesan Sekarang
+                        </button>
+<button class="border-2 border-white text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-white/10 transition-colors">
+                            Lihat Kamar
+                        </button>
+</div>
+</div>
+</div>
+</section>
+<!-- About Us Section -->
+<section class="py-24 max-w-7xl mx-auto px-6" id="about">
+<div class="grid md:grid-cols-2 gap-16 items-center">
+<div class="space-y-6">
+<div class="inline-block px-4 py-1.5 bg-primary/10 rounded-full border border-primary/20">
+<span class="text-primary text-xs font-bold uppercase tracking-widest">Tentang Kami</span>
+</div>
+<h2 class="text-4xl font-extrabold leading-tight">Warisan Budaya dengan Kenyamanan Modern</h2>
+<p class="text-lg text-gray-600 leading-relaxed">
+                        Lumbu Hotel menghadirkan standar baru dalam pelayanan perhotelan di Kalimantan. Kami mengintegrasikan detail arsitektur lokal yang ikonik dengan fasilitas mewah kelas dunia untuk memastikan pengalaman menginap Anda tak terlupakan.
+                    </p>
+<div class="grid grid-cols-2 gap-4 pt-4">
+<div class="p-4 bg-white rounded-xl shadow-sm border border-gray-100">
+<h4 class="text-3xl font-bold text-primary">10+</h4>
+<p class="text-sm font-semibold text-gray-500">Tahun Pengalaman</p>
+</div>
+<div class="p-4 bg-white rounded-xl shadow-sm border border-gray-100">
+<h4 class="text-3xl font-bold text-primary">200+</h4>
+<p class="text-sm font-semibold text-gray-500">Kamar Mewah</p>
+</div>
+</div>
+</div>
+<div class="space-y-4">
+<div class="flex gap-6 items-start p-6 bg-white rounded-2xl shadow-sm border border-gray-100 hover:shadow-md transition-shadow">
+<div class="w-14 h-14 bg-primary/10 rounded-xl flex items-center justify-center flex-shrink-0">
+<span class="material-symbols-outlined text-primary text-3xl">location_on</span>
+</div>
+<div>
+<h3 class="text-xl font-bold mb-1">Strategis</h3>
+<p class="text-gray-500">Berlokasi tepat di jantung kota, memudahkan akses ke pusat bisnis dan wisata Kalimantan.</p>
+</div>
+</div>
+<div class="flex gap-6 items-start p-6 bg-white rounded-2xl shadow-sm border border-gray-100 hover:shadow-md transition-shadow">
+<div class="w-14 h-14 bg-primary/10 rounded-xl flex items-center justify-center flex-shrink-0">
+<span class="material-symbols-outlined text-primary text-3xl">support_agent</span>
+</div>
+<div>
+<h3 class="text-xl font-bold mb-1">Pelayanan 24 Jam</h3>
+<p class="text-gray-500">Staf profesional kami berdedikasi melayani Anda kapan pun dengan kehangatan khas lokal.</p>
+</div>
+</div>
+<div class="flex gap-6 items-start p-6 bg-white rounded-2xl shadow-sm border border-gray-100 hover:shadow-md transition-shadow">
+<div class="w-14 h-14 bg-primary/10 rounded-xl flex items-center justify-center flex-shrink-0">
+<span class="material-symbols-outlined text-primary text-3xl">hotel_class</span>
+</div>
+<div>
+<h3 class="text-xl font-bold mb-1">Fasilitas Modern</h3>
+<p class="text-gray-500">Konektivitas tinggi dan peralatan mutakhir menunjang kenyamanan dan produktivitas Anda.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Facilities Section -->
+<section class="bg-gray-100/50 py-24" id="facilities">
+<div class="max-w-7xl mx-auto px-6">
+<div class="text-center mb-16 space-y-4">
+<h2 class="text-4xl font-bold">Fasilitas Eksklusif</h2>
+<p class="text-gray-500 max-w-xl mx-auto">Kami menyediakan segala kebutuhan untuk menunjang gaya hidup modern dan kebutuhan istirahat Anda.</p>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+<div class="bg-white p-8 rounded-2xl flex flex-col items-center text-center group hover:bg-primary transition-all duration-300">
+<span class="material-symbols-outlined text-4xl text-primary group-hover:text-white mb-4">wifi</span>
+<h3 class="font-bold group-hover:text-white">WiFi Kecepatan Tinggi</h3>
+</div>
+<div class="bg-white p-8 rounded-2xl flex flex-col items-center text-center group hover:bg-primary transition-all duration-300">
+<span class="material-symbols-outlined text-4xl text-primary group-hover:text-white mb-4">ac_unit</span>
+<h3 class="font-bold group-hover:text-white">Full AC</h3>
+</div>
+<div class="bg-white p-8 rounded-2xl flex flex-col items-center text-center group hover:bg-primary transition-all duration-300">
+<span class="material-symbols-outlined text-4xl text-primary group-hover:text-white mb-4">local_parking</span>
+<h3 class="font-bold group-hover:text-white">Parkir Luas</h3>
+</div>
+<div class="bg-white p-8 rounded-2xl flex flex-col items-center text-center group hover:bg-primary transition-all duration-300">
+<span class="material-symbols-outlined text-4xl text-primary group-hover:text-white mb-4">restaurant</span>
+<h3 class="font-bold group-hover:text-white">Restoran Gourmet</h3>
+</div>
+<div class="bg-white p-8 rounded-2xl flex flex-col items-center text-center group hover:bg-primary transition-all duration-300">
+<span class="material-symbols-outlined text-4xl text-primary group-hover:text-white mb-4">smart_display</span>
+<h3 class="font-bold group-hover:text-white">Smart TV</h3>
+</div>
+<div class="bg-white p-8 rounded-2xl flex flex-col items-center text-center group hover:bg-primary transition-all duration-300">
+<span class="material-symbols-outlined text-4xl text-primary group-hover:text-white mb-4">hot_tub</span>
+<h3 class="font-bold group-hover:text-white">Air Panas</h3>
+</div>
+<div class="bg-white p-8 rounded-2xl flex flex-col items-center text-center group hover:bg-primary transition-all duration-300">
+<span class="material-symbols-outlined text-4xl text-primary group-hover:text-white mb-4">pool</span>
+<h3 class="font-bold group-hover:text-white">Kolam Renang</h3>
+</div>
+<div class="bg-white p-8 rounded-2xl flex flex-col items-center text-center group hover:bg-primary transition-all duration-300">
+<span class="material-symbols-outlined text-4xl text-primary group-hover:text-white mb-4">fitness_center</span>
+<h3 class="font-bold group-hover:text-white">Pusat Kebugaran</h3>
+</div>
+</div>
+</div>
+</section>
+<!-- Rooms Section -->
+<section class="py-24 max-w-7xl mx-auto px-6" id="rooms">
+<div class="flex justify-between items-end mb-16">
+<div class="space-y-4">
+<h2 class="text-4xl font-bold">Pilih Ruang Istirahat Anda</h2>
+<p class="text-gray-500 max-w-lg">Kamar yang dirancang khusus untuk ketenangan dan kenyamanan optimal.</p>
+</div>
+<button class="text-primary font-bold flex items-center gap-2 hover:gap-3 transition-all">
+                    Lihat Semua Kamar <span class="material-symbols-outlined">arrow_forward</span>
+</button>
+</div>
+<div class="grid md:grid-cols-3 gap-8">
+<!-- Standard Room -->
+<div class="group bg-white rounded-2xl overflow-hidden shadow-sm border border-gray-100 hover:shadow-xl transition-all">
+<div class="relative h-64 overflow-hidden">
+<img alt="Standard Room" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" data-alt="Cozy modern standard hotel room with warm lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCsnSlaWlxtXLTeMiZq7C-YosFqwuqbhtn7IYJIIjAksvjQ-UdsOGCr6HyyOmTzidxk-ll_f8QQZORPvrLb0CvczCSNaJ4ftU8TR-9NlxFwNvY1uXNVU4D_mvs3FagBhBqlTzU2wXPnlc5kXyzSMNQiYvryS_ogN8ToLOcbC0P3UX8RZ4T7Ycxlzbfmj2iRhf4D1WCa22VbOSKCXojoR74PiW8RzbZvZv9bgAyO9jI4hgDZhweM5bnckJ8fkGOdV0UJYucZlOlKESHC"/>
+<div class="absolute top-4 left-4 bg-primary text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-widest">
+                            Terlaris
+                        </div>
+</div>
+<div class="p-6 space-y-4">
+<div class="flex justify-between items-start">
+<h3 class="text-xl font-bold">Standard Room</h3>
+<p class="text-primary font-bold">Rp 650.000<span class="text-gray-400 text-sm font-normal">/malam</span></p>
+</div>
+<ul class="space-y-2 text-sm text-gray-500">
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-sm text-primary">check_circle</span> Queen Size Bed</li>
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-sm text-primary">check_circle</span> City View</li>
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-sm text-primary">check_circle</span> Breakfast Included</li>
+</ul>
+<button class="w-full py-3 rounded-lg border-2 border-primary text-primary font-bold hover:bg-primary hover:text-white transition-all">Pesan Sekarang</button>
+</div>
+</div>
+<!-- Deluxe Room -->
+<div class="group bg-white rounded-2xl overflow-hidden shadow-sm border border-gray-100 hover:shadow-xl transition-all">
+<div class="relative h-64 overflow-hidden">
+<img alt="Deluxe Room" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" data-alt="Elegant deluxe room with large windows and city view" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBzp44V-YH0M2ULSvCyl7zJ1W7CRiUAdzP2rcEKZMbWAOsIGI7FHr0jo31n38EHCvZMk6vlN6r_h_w_Nf1gVgCF76aS4Lq5CZrn37vqk3jevi1fH20G47C6LjZwGbRc7uIsPWvjJVFjLZQKCTZJttVMNQx9n3v5oJ3azfWM4PPUxBMLrMmkJPNfIu75S34t48jH-VNMWcVBC9kU5QjGAy9xo2Kx0mJn492mAW6UGXZ7uPNNhsnJp-lrFd2eMwFHaRAfp1hsaZS0ifMJ"/>
+<div class="absolute top-4 left-4 bg-primary text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-widest">
+                            Rekomendasi
+                        </div>
+</div>
+<div class="p-6 space-y-4">
+<div class="flex justify-between items-start">
+<h3 class="text-xl font-bold">Deluxe Room</h3>
+<p class="text-primary font-bold">Rp 950.000<span class="text-gray-400 text-sm font-normal">/malam</span></p>
+</div>
+<ul class="space-y-2 text-sm text-gray-500">
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-sm text-primary">check_circle</span> King Size Bed</li>
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-sm text-primary">check_circle</span> Balcony with View</li>
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-sm text-primary">check_circle</span> Mini Bar &amp; Coffee</li>
+</ul>
+<button class="w-full py-3 rounded-lg bg-primary text-white font-bold hover:bg-primary/90 transition-all shadow-lg shadow-primary/20">Pesan Sekarang</button>
+</div>
+</div>
+<!-- Suite Room -->
+<div class="group bg-white rounded-2xl overflow-hidden shadow-sm border border-gray-100 hover:shadow-xl transition-all">
+<div class="relative h-64 overflow-hidden">
+<img alt="Executive Suite" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" data-alt="Spacious luxury suite with living area and premium furniture" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCYE7q1kjs14S2xzdneHn9DchsVnNCHu1_feb-Lm08YSIEhDFShP88uFQ-3zw3nBxxn0GoNdEvqIkAZqgsT8oifBwprsNBEeq7YWxjPKm03_oLoOL6oSe_d5p1UlV8VXgYRP_60V2-4mEcxHWiylEeUXTwlxNGfLFGy1OSJkhuvY9hMbyGmjwgG-oWQU7LDvZHp3F3jgBm7-z1XqZeK0W7PB5Q1O_6p6jYi3WcoAk9lY-W-17kIaGlO0PpRK1oILBSC9kLeCWoa1lHH"/>
+<div class="absolute top-4 left-4 bg-primary text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-widest">
+                            Premium
+                        </div>
+</div>
+<div class="p-6 space-y-4">
+<div class="flex justify-between items-start">
+<h3 class="text-xl font-bold">Executive Suite</h3>
+<p class="text-primary font-bold">Rp 1.850.000<span class="text-gray-400 text-sm font-normal">/malam</span></p>
+</div>
+<ul class="space-y-2 text-sm text-gray-500">
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-sm text-primary">check_circle</span> Separate Living Room</li>
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-sm text-primary">check_circle</span> Bathtub with View</li>
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-sm text-primary">check_circle</span> VIP Concierge Access</li>
+</ul>
+<button class="w-full py-3 rounded-lg border-2 border-primary text-primary font-bold hover:bg-primary hover:text-white transition-all">Pesan Sekarang</button>
+</div>
+</div>
+</div>
+</section>
+<!-- Gallery Section -->
+<section class="py-24 bg-charcoal text-white" id="gallery">
+<div class="max-w-7xl mx-auto px-6">
+<div class="text-center mb-16 space-y-4">
+<h2 class="text-4xl font-bold">Galeri Kami</h2>
+<p class="text-white/60 max-w-xl mx-auto">Sekilas tentang kenyamanan dan gaya hidup di Lumbu Hotel.</p>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-4 gap-4 auto-rows-[200px]">
+<div class="md:col-span-2 md:row-span-2 rounded-2xl overflow-hidden">
+<img alt="Gallery Pool" class="w-full h-full object-cover hover:scale-110 transition-transform duration-700" data-alt="Infinity pool at sunset overlooking the city" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBbotEjNyP36WDs3RIg25bwUpwT3TjJscIKxnAEDe6plA1xTxiiH7vmPi96C6ghKP_ks-phpclELNNeXsXUfycqvKA9jX8iJIuAL0qhb299GoeEvGmQqYtf4BqEKYLzxRKO_wjgbf4ZFfgibrO9FU6g3xL6kydgfN3h26Rzcj0uuJhSEl1-4XXoFKuDLWlsQrkThKTJ74hV2mFimAez7YFXdXxCjb5YDqDOpSTOsmHQ2rchWd7TPqGlMH-jCCRkfM-tnxiv5kSZz8UI"/>
+</div>
+<div class="rounded-2xl overflow-hidden">
+<img alt="Gallery Bar" class="w-full h-full object-cover hover:scale-110 transition-transform duration-700" data-alt="Modern hotel bar with ambient lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCMoAEpphpdRMdg3l_BlZsPHoEPGr7R-PzAn3BHnuhGswn59893NvQuaVoofD7modPeBqPGPgkzxQtGuxnFWl1qc5EaQidUEkLF1Qd-WefbhO8t71l0VZsFt9vMqh40rsCsv4Iv07pr7wDdu3M-IjKSn3b_8OlF1lULKSnIS5uwHQmxp_cjNxby3yT_Ne-MGV3p8dD-ZzOlNZAB1fnyBiZwgb0BRU-yYIYeLR5ToXY5yK6VWgAjI_kQfvDpWbe__9YVn0V4YJ7hYQ0E"/>
+</div>
+<div class="rounded-2xl overflow-hidden">
+<img alt="Gallery Lobby" class="w-full h-full object-cover hover:scale-110 transition-transform duration-700" data-alt="Elegant luxury hotel lobby and reception" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCPs4ymdr0n0fqJvXN_O8dDMoBxHmIXsm96MO3dtoZ-kPpPu96fFPo4IzzHTF4JzIdtaj98ekGpdlbBqXlYX3C1ByyAr_EV6j9YS2Zsc3iWOcxIlE7stK923VCXV8hbmga7SnwsjNxBpywqSjLGNzpYap-mzQAKsn-jyE_dVwZ4V7aKvaj8cqS5_pxr5whnpm2TcQkw6mxvIDM3gqjd8H2YjR9lBY-BSKe2Uml2x8yTg2CDxfak8OSpCVCV9AjWPuzb6oIKSfehfqhX"/>
+</div>
+<div class="md:col-span-2 rounded-2xl overflow-hidden">
+<img alt="Gallery Restaurant" class="w-full h-full object-cover hover:scale-110 transition-transform duration-700" data-alt="Fine dining table setting in hotel restaurant" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCk4OTIqj4r864j7LLDFTzpWqo27zn3kr9VkIn8nxFkajcNC10ammTJez1e-nI7y37LEQ4U5DB9ey5UUkAd0E5sxVaHsGp88373HcUobkSbhA0n-JuCYX1RP2EAv0nztpBFHc50Y2TiTQ0-aEd_TOs0HusgI8f1mwsZIDh6qWK49BSLS3YOL6bjYWWbKiB0dzG_dAKbFwQ4XcqgRQT4tjffqga-4VNC51yBsVZoPhv-Raw2Mt7oPnARnv_2vcsdHXTCcLJtR-a8vtay"/>
+</div>
+<div class="rounded-2xl overflow-hidden">
+<img alt="Gallery Spa" class="w-full h-full object-cover hover:scale-110 transition-transform duration-700" data-alt="Relaxing spa room with massage tables" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBb1McYTTy4TPS27X7V_OyGeShRVfGBtgtLLkpqvmQh5B5rqsdIsiLoGxv575odyWlXLGjJ8lXB1RvGeyFnQaOvLYEl-gwYHeTaJCMN8A-vt5CM_PJq3DVIQX-mMEPAtXfNDATnusGLOeGIvUgqwCkK01aR35bjHX8yQqsRXmAv14vqIMnGJ48ZECVVichw3RrGQ3zv-DE5Sw1Sm97WAYleSq_SkHU5yCFx3kUX-m8yPNij9uQ0n_Nn20LgPZL_v4NqMq4pSmqHnwBr"/>
+</div>
+<div class="rounded-2xl overflow-hidden">
+<img alt="Gallery Gym" class="w-full h-full object-cover hover:scale-110 transition-transform duration-700" data-alt="Fully equipped modern hotel fitness center" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAVsOide5LDjXSKEQH-LmUVYZCZN9Qx_NYtidIa784yD71DMwJGVCjHgw7Mx5eC_MmD82oPPYC1Qw27yJZRFySDsK08XRp3Ym2S7N7519KbdJL3uUBE0JcGzvpbSNadh_V3jLcySqvAGZLY-ilXGJfrFjApAU7AHikcf1Ac1Z6iApYINnJjT6wyy6FmEskekswtSF-6YtIXgTA_YqUu3BEKdxIKFR1BElr_mmtX_H19cb9yRmjaSUt00hNO3nstNhsPFcEx1lF5I2Xx"/>
+</div>
+</div>
+</div>
+</section>
+<!-- Location Section -->
+<section class="py-24 max-w-7xl mx-auto px-6" id="location">
+<div class="grid md:grid-cols-2 gap-16 items-center">
+<div class="space-y-8">
+<h2 class="text-4xl font-bold">Lokasi Strategis</h2>
+<p class="text-gray-500 text-lg">Terletak di kawasan pusat bisnis Kalimantan, memudahkan Anda menjangkau berbagai destinasi utama.</p>
+<div class="space-y-6">
+<div class="flex gap-4">
+<span class="material-symbols-outlined text-primary">flight_takeoff</span>
+<div>
+<h4 class="font-bold">15 Menit ke Bandara Utama</h4>
+<p class="text-sm text-gray-500">Layanan antar-jemput bandara gratis tersedia bagi tamu suite.</p>
+</div>
+</div>
+<div class="flex gap-4">
+<span class="material-symbols-outlined text-primary">shopping_bag</span>
+<div>
+<h4 class="font-bold">5 Menit ke Mall &amp; Hiburan</h4>
+<p class="text-sm text-gray-500">Pusat perbelanjaan terbesar hanya berjarak beberapa langkah.</p>
+</div>
+</div>
+<div class="flex gap-4">
+<span class="material-symbols-outlined text-primary">museum</span>
+<div>
+<h4 class="font-bold">Akses Mudah Landmark Kota</h4>
+<p class="text-sm text-gray-500">Dikelilingi oleh pusat pemerintahan dan objek wisata budaya.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="h-[400px] bg-gray-200 rounded-3xl overflow-hidden relative shadow-inner">
+<div class="absolute inset-0 bg-primary/5"></div>
+<!-- Simplified Map Placeholder Representation -->
+<div class="w-full h-full flex items-center justify-center flex-col gap-4 text-primary">
+<span class="material-symbols-outlined text-6xl">map</span>
+<p class="font-bold uppercase tracking-widest text-sm">Peta Kalimantan Tengah</p>
+</div>
+<div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
+<div class="relative">
+<span class="material-symbols-outlined text-primary text-5xl drop-shadow-lg">location_on</span>
+<div class="absolute -top-1 right-0 w-3 h-3 bg-red-500 rounded-full animate-ping"></div>
+</div>
+</div>
+<img class="hidden" data-alt="Stylized map showing hotel location in Central Kalimantan" data-location="Kalimantan, Indonesia" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC09PlY0e_xRIJXcEaxxm_FceDdraxvdIt1LBsPgqx7lHR9SgeoeI9JS1aBubduZ3G8gjeDIn7ImxmVMyIk-UAtqEMxkt4JOJbwGVYwtCWtmyTTdT5BNAQ_D9pG554FngRtxiyiRkCVhHuAHqy-fOyU_disYrlXaq-YO8eIwFrWI7W71v4a50o_eixmGB_GWs0TJuyv6fuGM2JpwXfDjnHUi-GeynrRw0EtzE8TsuCOf5wLouNBsQoVGE0Uve8tF0txwsle-RHSIfM9"/>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-charcoal text-white pt-20 pb-10">
+<div class="max-w-7xl mx-auto px-6">
+<div class="grid md:grid-cols-4 gap-12 pb-16 border-b border-white/10">
+<div class="col-span-2 space-y-6">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 bg-primary flex items-center justify-center rounded-lg">
+<span class="material-symbols-outlined text-white">apartment</span>
+</div>
+<h2 class="text-2xl font-bold tracking-tight">Lumbu Hotel</h2>
+</div>
+<p class="text-white/60 max-w-sm leading-relaxed">
+                        Mendedikasikan diri untuk memberikan pengalaman menginap yang autentik dan mewah di jantung pulau Kalimantan.
+                    </p>
+<div class="flex gap-4">
+<a class="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center hover:bg-primary hover:border-primary transition-all" href="#">
+<span class="material-symbols-outlined text-sm">public</span>
+</a>
+<a class="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center hover:bg-primary hover:border-primary transition-all" href="#">
+<span class="material-symbols-outlined text-sm">photo_camera</span>
+</a>
+<a class="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center hover:bg-primary hover:border-primary transition-all" href="#">
+<span class="material-symbols-outlined text-sm">share</span>
+</a>
+</div>
+</div>
+<div class="space-y-6">
+<h4 class="text-lg font-bold">Navigasi</h4>
+<ul class="space-y-4 text-white/60 text-sm">
+<li><a class="hover:text-primary transition-colors" href="#about">Tentang Kami</a></li>
+<li><a class="hover:text-primary transition-colors" href="#rooms">Kamar &amp; Suite</a></li>
+<li><a class="hover:text-primary transition-colors" href="#facilities">Fasilitas</a></li>
+<li><a class="hover:text-primary transition-colors" href="#gallery">Galeri Foto</a></li>
+</ul>
+</div>
+<div class="space-y-6">
+<h4 class="text-lg font-bold">Kontak</h4>
+<ul class="space-y-4 text-white/60 text-sm">
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary text-sm">location_on</span>
+                            Jl. Utama Kalimantan No. 88, Indonesia
+                        </li>
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary text-sm">call</span>
+                            +62 812-3456-7890
+                        </li>
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary text-sm">mail</span>
+                            info@lumbuhotel.com
+                        </li>
+</ul>
+</div>
+</div>
+<div class="pt-10 flex flex-col md:flex-row justify-between items-center gap-6">
+<p class="text-white/40 text-sm">© 2024 Lumbu Hotel. Hak Cipta Dilindungi.</p>
+<button class="flex items-center gap-3 bg-[#25D366] text-white px-6 py-3 rounded-full font-bold hover:scale-105 transition-transform">
+<svg class="w-5 h-5 fill-current" viewbox="0 0 24 24"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766 0-3.187-2.59-5.771-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217h.332c.101 0 .237-.038.37.285.144.35.491 1.198.534 1.285.043.087.072.188.014.303-.058.116-.087.188-.173.289l-.26.303c-.087.101-.177.21-.077.382.1.173.446.735.956 1.19.658.584 1.21.765 1.383.852.173.087.275.072.376-.043.101-.116.433-.505.548-.678.116-.173.231-.144.39-.087.159.058 1.011.477 1.184.563s.289.13.332.202c.045.072.045.419-.1.824z"></path></svg>
+                    Hubungi Kami via WhatsApp
+                </button>
+</div>
+</div>
+</footer>
+<!-- Fixed Booking Indicator (Mobile/Scroll) -->
+<div class="fixed bottom-8 left-8 z-40 hidden md:block">
+<div class="bg-white p-4 rounded-2xl shadow-2xl border border-primary/20 flex items-center gap-4 animate-bounce">
+<div class="w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center">
+<span class="material-symbols-outlined text-primary">sell</span>
+</div>
+<div>
+<p class="text-[10px] font-bold text-primary uppercase">Promo Terbatas</p>
+<p class="text-xs font-bold">Diskon 20% Akhir Pekan!</p>
+</div>
+</div>
+</div>
+</body></html>
