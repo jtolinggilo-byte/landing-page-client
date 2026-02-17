@@ -1,0 +1,1343 @@
+# Hotel Royal Victoria - Landing Page Preview
+## Implementation Plan
+
+> **For Claude:** REQUIRED SUB-SKILL: Use superpowers:executing-plans to implement this plan task-by-task.
+
+**Goal:** Membuat landing page preview modern dengan dark theme untuk menunjukkan kepada klien seperti apa website Hotel Royal Victoria setelah diperbaiki.
+
+**Architecture:** Single-page landing page dengan smooth scroll navigation, menggunakan modern CSS (Tailwind) dan vanilla JavaScript. Responsive design mobile-first dengan animasi subtle untuk kesan premium hotel bintang 4.
+
+**Tech Stack:** HTML5, Tailwind CSS (CDN), Vanilla JavaScript, Google Fonts (Inter/Playfair Display)
+
+---
+
+## Informasi Klien
+
+### Hotel Royal Victoria
+- **Lokasi:** Jl. A. W. Syahrani No. 1 RT. 04, Teluk Lingga, Sangatta Utara, Kutai Timur, Kalimantan Timur 75683
+- **Klasifikasi:** Hotel Bintang 4
+- **Rating Google:** 4.1 (1,528 reviews)
+- **Harga Mulai:** Rp 631.662/malam
+- **Telepon:** 0811-5440-900
+- **Website Lama:** https://www.hotelroyalgroup.com
+
+### Fasilitas Utama
+- Free Wi-Fi
+- Breakfast included
+- Free parking
+- Outdoor pool
+- Air-conditioned rooms
+- Accessible facilities
+- Wehea Coffee Shop
+- Geuliz Spa
+- Meeting rooms
+
+### Social Media
+- Instagram: @royalsangatta
+- Instagram Spa: @geulizsparoyal
+- Facebook: hotelroyalvictoriaborneo
+- WhatsApp: +62 811-544-0900
+
+---
+
+## Hasil Audit Website Lama (Skor: 28/100)
+
+| Aspek | Skor | Masalah Utama |
+|-------|------|---------------|
+| Performance | 15 | TTFB 508ms, no image optimization |
+| SEO | 20 | Zero meta tags, no sitemap |
+| Security | 45 | Missing security headers |
+| UX/Content | 25 | 4 dari 6 halaman kosong |
+
+**Landing page preview ini akan menunjukkan improvement dari semua aspek di atas.**
+
+---
+
+## Design System - Dark Theme
+
+### Color Palette
+
+```css
+/* Primary Colors */
+--color-primary: #3B82F6;        /* Royal Blue - accent utama */
+--color-primary-light: #60A5FA;  /* Hover state */
+--color-primary-dark: #2563EB;   /* Active state */
+
+/* Background Colors */
+--color-bg-dark: #0F172A;        /* Main background */
+--color-bg-card: #1E293B;        /* Card background */
+--color-bg-elevated: #334155;    /* Elevated elements */
+
+/* Text Colors */
+--color-text-primary: #F8FAFC;   /* Main text */
+--color-text-secondary: #94A3B8; /* Secondary text */
+--color-text-muted: #64748B;     /* Muted text */
+
+/* Accent Colors */
+--color-gold: #F59E0B;           /* Premium/star rating */
+--color-success: #10B981;        /* Availability */
+--color-error: #EF4444;          /* Alerts */
+```
+
+### Typography
+
+```css
+/* Headings - Playfair Display (elegant, hotel-style) */
+font-family: 'Playfair Display', serif;
+
+/* Body - Inter (modern, readable) */
+font-family: 'Inter', sans-serif;
+
+/* Scale */
+--text-xs: 0.75rem;
+--text-sm: 0.875rem;
+--text-base: 1rem;
+--text-lg: 1.125rem;
+--text-xl: 1.25rem;
+--text-2xl: 1.5rem;
+--text-3xl: 1.875rem;
+--text-4xl: 2.25rem;
+--text-5xl: 3rem;
+```
+
+### Spacing & Layout
+
+```css
+--spacing-section: 6rem;         /* Between sections */
+--spacing-element: 2rem;         /* Between elements */
+--max-width: 1280px;             /* Container max width */
+--border-radius: 0.75rem;        /* Card corners */
+```
+
+---
+
+## Struktur Landing Page
+
+```
+landing-page/
+├── index.html
+├── assets/
+│   ├── images/
+│   │   ├── hero-hotel.jpg       (placeholder atau dari web)
+│   │   ├── room-deluxe.jpg
+│   │   ├── room-suite.jpg
+│   │   ├── pool.jpg
+│   │   ├── restaurant.jpg
+│   │   └── logo.png
+│   └── css/
+│       └── custom.css           (custom styles beyond Tailwind)
+└── js/
+    └── main.js                  (smooth scroll, animations)
+```
+
+---
+
+## Sections Landing Page
+
+### 1. Navigation Bar (Sticky)
+- Logo Hotel Royal Victoria
+- Menu: Home | Rooms | Facilities | Gallery | Contact
+- CTA Button: "Book Now" (WhatsApp link)
+- Mobile hamburger menu
+
+### 2. Hero Section
+- Full-width background image dengan overlay gradient
+- Headline: "Hotel Royal Victoria"
+- Subheadline: "Satu-satunya Hotel Bintang 4 di Sangatta"
+- Rating badge: 4.1 stars (1,528 reviews)
+- Quick booking widget (check-in, check-out, guests)
+- CTA: "Check Availability"
+
+### 3. About Section
+- Deskripsi singkat hotel
+- Key highlights dalam cards:
+  - Lokasi strategis (27km dari Teluk Lombok Beach)
+  - 1km dari Trans-Kalimantan Highway
+  - Dekat pusat kota Sangatta
+- Statistics counters (animated):
+  - 1,528+ Reviews
+  - 4.1 Rating
+  - 4 Star Hotel
+
+### 4. Rooms Section
+- Section header dengan tagline
+- Room cards grid (3 columns desktop):
+  - Superior Room
+  - Deluxe Room
+  - Suite Room
+- Setiap card:
+  - Image
+  - Room name
+  - Price per night
+  - Key amenities (icons)
+  - "View Details" button
+
+### 5. Facilities Section
+- Icon grid layout (2x3 atau 3x2):
+  - Free Wi-Fi
+  - Outdoor Pool
+  - Restaurant
+  - Meeting Room
+  - Spa (Geuliz Spa)
+  - Free Parking
+- Hover effect untuk detail
+
+### 6. Gallery Section
+- Masonry grid atau carousel
+- Lightbox preview
+- Mix of: rooms, pool, exterior, restaurant, facilities
+
+### 7. Testimonials Section
+- Carousel dengan 3 reviews
+- Avatar, name, date, rating stars, text
+- Source badge (Google, TripAdvisor, etc)
+
+### 8. Location Section
+- Google Maps embed
+- Address card
+- Contact info:
+  - Phone
+  - WhatsApp
+  - Email
+- Nearby attractions list
+
+### 9. CTA Section
+- Gradient background
+- "Ready to Experience Royal Comfort?"
+- Large WhatsApp button
+- OTA links: Traveloka, Agoda, Booking.com
+
+### 10. Footer
+- Logo
+- Quick links
+- Social media icons
+- Copyright
+- "Website Preview by ALURWEB"
+
+---
+
+## Implementation Tasks
+
+### Task 1: Project Setup
+
+**Files:**
+- Create: `Hotel Victora/landing-page/index.html`
+- Create: `Hotel Victora/landing-page/assets/css/custom.css`
+- Create: `Hotel Victora/landing-page/js/main.js`
+
+**Step 1: Create folder structure**
+
+```bash
+mkdir -p "Hotel Victora/landing-page/assets/css"
+mkdir -p "Hotel Victora/landing-page/assets/images"
+mkdir -p "Hotel Victora/landing-page/js"
+```
+
+**Step 2: Create base HTML file with Tailwind CDN**
+
+```html
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Hotel Royal Victoria - Satu-satunya Hotel Bintang 4 di Sangatta, Kutai Timur. Rating 4.1 dari 1,528+ reviews.">
+
+    <!-- Open Graph Tags -->
+    <meta property="og:title" content="Hotel Royal Victoria Sangatta">
+    <meta property="og:description" content="Hotel Bintang 4 terbaik di Sangatta dengan fasilitas lengkap: Pool, Spa, Restaurant, Meeting Room.">
+    <meta property="og:type" content="website">
+
+    <title>Hotel Royal Victoria | Hotel Bintang 4 Sangatta, Kutai Timur</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: {
+                            DEFAULT: '#3B82F6',
+                            light: '#60A5FA',
+                            dark: '#2563EB'
+                        },
+                        dark: {
+                            bg: '#0F172A',
+                            card: '#1E293B',
+                            elevated: '#334155'
+                        },
+                        gold: '#F59E0B'
+                    },
+                    fontFamily: {
+                        heading: ['Playfair Display', 'serif'],
+                        body: ['Inter', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/custom.css">
+</head>
+<body class="bg-dark-bg text-slate-100 font-body">
+    <!-- Content will go here -->
+
+    <!-- Main JS -->
+    <script src="js/main.js"></script>
+</body>
+</html>
+```
+
+**Step 3: Create custom.css for additional styles**
+
+```css
+/* Custom animations and styles */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.animate-fade-in-up {
+    animation: fadeInUp 0.6s ease-out forwards;
+}
+
+/* Gradient overlays */
+.hero-gradient {
+    background: linear-gradient(
+        to bottom,
+        rgba(15, 23, 42, 0.7) 0%,
+        rgba(15, 23, 42, 0.9) 100%
+    );
+}
+
+/* Glass effect for cards */
+.glass-card {
+    background: rgba(30, 41, 59, 0.8);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(148, 163, 184, 0.1);
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #0F172A;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #334155;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #475569;
+}
+```
+
+**Step 4: Create main.js skeleton**
+
+```javascript
+// Smooth scroll and animations
+document.addEventListener('DOMContentLoaded', function() {
+    // Mobile menu toggle
+    const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    if (mobileMenuBtn && mobileMenu) {
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+    }
+
+    // Scroll animations
+    const observerOptions = {
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px'
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('animate-fade-in-up');
+            }
+        });
+    }, observerOptions);
+
+    document.querySelectorAll('.animate-on-scroll').forEach(el => {
+        observer.observe(el);
+    });
+
+    // Navbar background on scroll
+    const navbar = document.getElementById('navbar');
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 50) {
+            navbar.classList.add('bg-dark-bg/95', 'backdrop-blur-md', 'shadow-lg');
+        } else {
+            navbar.classList.remove('bg-dark-bg/95', 'backdrop-blur-md', 'shadow-lg');
+        }
+    });
+});
+```
+
+---
+
+### Task 2: Navigation Bar
+
+**Files:**
+- Modify: `Hotel Victora/landing-page/index.html`
+
+**Step 1: Add navigation HTML inside body**
+
+```html
+<!-- Navigation -->
+<nav id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex items-center justify-between h-20">
+            <!-- Logo -->
+            <a href="#" class="flex items-center space-x-3">
+                <div class="w-12 h-12 bg-primary rounded-full flex items-center justify-center">
+                    <span class="font-heading text-xl font-bold">RV</span>
+                </div>
+                <div class="hidden sm:block">
+                    <span class="font-heading text-xl font-semibold">Royal Victoria</span>
+                </div>
+            </a>
+
+            <!-- Desktop Menu -->
+            <div class="hidden md:flex items-center space-x-8">
+                <a href="#home" class="text-slate-300 hover:text-white transition-colors">Home</a>
+                <a href="#rooms" class="text-slate-300 hover:text-white transition-colors">Rooms</a>
+                <a href="#facilities" class="text-slate-300 hover:text-white transition-colors">Facilities</a>
+                <a href="#gallery" class="text-slate-300 hover:text-white transition-colors">Gallery</a>
+                <a href="#contact" class="text-slate-300 hover:text-white transition-colors">Contact</a>
+            </div>
+
+            <!-- CTA Button -->
+            <div class="hidden md:block">
+                <a href="https://wa.me/628115440900" target="_blank" rel="noopener"
+                   class="bg-primary hover:bg-primary-dark text-white px-6 py-2.5 rounded-lg font-medium transition-colors">
+                    Book Now
+                </a>
+            </div>
+
+            <!-- Mobile Menu Button -->
+            <button id="mobile-menu-btn" class="md:hidden p-2">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                </svg>
+            </button>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden pb-4">
+            <div class="flex flex-col space-y-4">
+                <a href="#home" class="text-slate-300 hover:text-white transition-colors">Home</a>
+                <a href="#rooms" class="text-slate-300 hover:text-white transition-colors">Rooms</a>
+                <a href="#facilities" class="text-slate-300 hover:text-white transition-colors">Facilities</a>
+                <a href="#gallery" class="text-slate-300 hover:text-white transition-colors">Gallery</a>
+                <a href="#contact" class="text-slate-300 hover:text-white transition-colors">Contact</a>
+                <a href="https://wa.me/628115440900" target="_blank" rel="noopener"
+                   class="bg-primary text-white px-6 py-2.5 rounded-lg font-medium text-center">
+                    Book Now
+                </a>
+            </div>
+        </div>
+    </div>
+</nav>
+```
+
+---
+
+### Task 3: Hero Section
+
+**Files:**
+- Modify: `Hotel Victora/landing-page/index.html`
+
+**Step 1: Add hero section after navigation**
+
+```html
+<!-- Hero Section -->
+<section id="home" class="relative min-h-screen flex items-center">
+    <!-- Background Image -->
+    <div class="absolute inset-0 z-0">
+        <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=1920&q=80"
+             alt="Hotel Royal Victoria"
+             class="w-full h-full object-cover">
+        <div class="absolute inset-0 hero-gradient"></div>
+    </div>
+
+    <!-- Content -->
+    <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20">
+        <div class="grid lg:grid-cols-2 gap-12 items-center">
+            <!-- Left Column - Text -->
+            <div class="animate-on-scroll">
+                <!-- Rating Badge -->
+                <div class="inline-flex items-center space-x-2 bg-dark-card/80 backdrop-blur px-4 py-2 rounded-full mb-6">
+                    <div class="flex items-center">
+                        <svg class="w-5 h-5 text-gold" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                        </svg>
+                        <span class="font-semibold text-gold ml-1">4.1</span>
+                    </div>
+                    <span class="text-slate-400">|</span>
+                    <span class="text-slate-300">1,528+ Reviews</span>
+                </div>
+
+                <!-- Headline -->
+                <h1 class="font-heading text-4xl sm:text-5xl lg:text-6xl font-bold mb-6">
+                    Hotel Royal <span class="text-primary">Victoria</span>
+                </h1>
+
+                <!-- Subheadline -->
+                <p class="text-xl sm:text-2xl text-slate-300 mb-4">
+                    Satu-satunya Hotel Bintang 4 di Sangatta
+                </p>
+                <p class="text-slate-400 mb-8 max-w-lg">
+                    Nikmati pengalaman menginap premium dengan fasilitas lengkap: outdoor pool, spa, restaurant, dan meeting room. Lokasi strategis di pusat kota Sangatta, Kutai Timur.
+                </p>
+
+                <!-- CTA Buttons -->
+                <div class="flex flex-col sm:flex-row gap-4">
+                    <a href="https://wa.me/628115440900?text=Halo,%20saya%20ingin%20reservasi%20kamar"
+                       target="_blank" rel="noopener"
+                       class="inline-flex items-center justify-center bg-primary hover:bg-primary-dark text-white px-8 py-4 rounded-lg font-semibold transition-all hover:scale-105">
+                        <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+                        </svg>
+                        Reservasi via WhatsApp
+                    </a>
+                    <a href="#rooms"
+                       class="inline-flex items-center justify-center border border-slate-500 hover:border-primary text-white px-8 py-4 rounded-lg font-semibold transition-colors">
+                        Lihat Kamar
+                        <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Right Column - Quick Booking Card -->
+            <div class="hidden lg:block animate-on-scroll">
+                <div class="glass-card rounded-2xl p-8">
+                    <h3 class="font-heading text-2xl font-semibold mb-6">Quick Booking</h3>
+                    <div class="space-y-4">
+                        <div>
+                            <label class="block text-slate-400 text-sm mb-2">Check In</label>
+                            <input type="date" class="w-full bg-dark-elevated border border-slate-600 rounded-lg px-4 py-3 text-white focus:border-primary focus:outline-none">
+                        </div>
+                        <div>
+                            <label class="block text-slate-400 text-sm mb-2">Check Out</label>
+                            <input type="date" class="w-full bg-dark-elevated border border-slate-600 rounded-lg px-4 py-3 text-white focus:border-primary focus:outline-none">
+                        </div>
+                        <div>
+                            <label class="block text-slate-400 text-sm mb-2">Jumlah Tamu</label>
+                            <select class="w-full bg-dark-elevated border border-slate-600 rounded-lg px-4 py-3 text-white focus:border-primary focus:outline-none">
+                                <option>1 Tamu</option>
+                                <option>2 Tamu</option>
+                                <option>3 Tamu</option>
+                                <option>4+ Tamu</option>
+                            </select>
+                        </div>
+                        <div class="pt-4">
+                            <p class="text-slate-400 text-sm mb-2">Harga mulai dari</p>
+                            <p class="text-3xl font-bold text-primary">Rp 631.662<span class="text-lg text-slate-400 font-normal">/malam</span></p>
+                        </div>
+                        <a href="https://wa.me/628115440900" target="_blank" rel="noopener"
+                           class="block w-full bg-primary hover:bg-primary-dark text-white text-center px-6 py-4 rounded-lg font-semibold transition-colors">
+                            Check Availability
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scroll Indicator -->
+    <div class="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce">
+        <svg class="w-6 h-6 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"/>
+        </svg>
+    </div>
+</section>
+```
+
+---
+
+### Task 4: About Section
+
+**Files:**
+- Modify: `Hotel Victora/landing-page/index.html`
+
+**Step 1: Add about section**
+
+```html
+<!-- About Section -->
+<section id="about" class="py-24 bg-dark-bg">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid lg:grid-cols-2 gap-16 items-center">
+            <!-- Left Column - Image Grid -->
+            <div class="animate-on-scroll grid grid-cols-2 gap-4">
+                <img src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=600&q=80"
+                     alt="Hotel Room" class="rounded-2xl w-full h-64 object-cover">
+                <img src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?auto=format&fit=crop&w=600&q=80"
+                     alt="Hotel Pool" class="rounded-2xl w-full h-64 object-cover mt-8">
+                <img src="https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?auto=format&fit=crop&w=600&q=80"
+                     alt="Hotel Lobby" class="rounded-2xl w-full h-64 object-cover -mt-8">
+                <img src="https://images.unsplash.com/photo-1584132967334-10e028bd69f7?auto=format&fit=crop&w=600&q=80"
+                     alt="Hotel Restaurant" class="rounded-2xl w-full h-64 object-cover">
+            </div>
+
+            <!-- Right Column - Content -->
+            <div class="animate-on-scroll">
+                <span class="text-primary font-semibold tracking-wider uppercase">Tentang Kami</span>
+                <h2 class="font-heading text-3xl sm:text-4xl font-bold mt-4 mb-6">
+                    Pengalaman Menginap Premium di Jantung Kota Sangatta
+                </h2>
+                <p class="text-slate-400 mb-8 leading-relaxed">
+                    Hotel Royal Victoria adalah satu-satunya hotel bintang 4 di Sangatta, Kutai Timur.
+                    Berlokasi strategis di jalan utama A. W. Syahrani, kami menawarkan kenyamanan dan
+                    kemewahan untuk tamu bisnis maupun leisure.
+                </p>
+
+                <!-- Highlights -->
+                <div class="space-y-4 mb-8">
+                    <div class="flex items-start space-x-4">
+                        <div class="w-12 h-12 bg-primary/20 rounded-lg flex items-center justify-center flex-shrink-0">
+                            <svg class="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
+                            </svg>
+                        </div>
+                        <div>
+                            <h4 class="font-semibold mb-1">Lokasi Strategis</h4>
+                            <p class="text-slate-400 text-sm">Hanya 1km dari Trans-Kalimantan Highway, 27km dari Teluk Lombok Beach</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start space-x-4">
+                        <div class="w-12 h-12 bg-primary/20 rounded-lg flex items-center justify-center flex-shrink-0">
+                            <svg class="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"/>
+                            </svg>
+                        </div>
+                        <div>
+                            <h4 class="font-semibold mb-1">Fasilitas Lengkap</h4>
+                            <p class="text-slate-400 text-sm">Pool, Spa, Restaurant, Meeting Room, Free Wi-Fi, dan Parking</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Stats -->
+                <div class="grid grid-cols-3 gap-6">
+                    <div class="text-center">
+                        <p class="text-3xl font-bold text-primary">4.1</p>
+                        <p class="text-slate-400 text-sm">Rating</p>
+                    </div>
+                    <div class="text-center">
+                        <p class="text-3xl font-bold text-primary">1.5K+</p>
+                        <p class="text-slate-400 text-sm">Reviews</p>
+                    </div>
+                    <div class="text-center">
+                        <div class="flex justify-center text-gold">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                        </div>
+                        <p class="text-slate-400 text-sm">Bintang 4</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+```
+
+---
+
+### Task 5: Rooms Section
+
+**Files:**
+- Modify: `Hotel Victora/landing-page/index.html`
+
+**Step 1: Add rooms section**
+
+```html
+<!-- Rooms Section -->
+<section id="rooms" class="py-24 bg-dark-card">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <!-- Section Header -->
+        <div class="text-center mb-16 animate-on-scroll">
+            <span class="text-primary font-semibold tracking-wider uppercase">Akomodasi</span>
+            <h2 class="font-heading text-3xl sm:text-4xl font-bold mt-4 mb-4">
+                Pilihan Kamar Kami
+            </h2>
+            <p class="text-slate-400 max-w-2xl mx-auto">
+                Setiap kamar dirancang untuk memberikan kenyamanan maksimal dengan fasilitas modern dan pemandangan terbaik.
+            </p>
+        </div>
+
+        <!-- Room Cards -->
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Superior Room -->
+            <div class="animate-on-scroll bg-dark-bg rounded-2xl overflow-hidden group hover:ring-2 hover:ring-primary transition-all">
+                <div class="relative h-64 overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1611892440504-42a792e24d32?auto=format&fit=crop&w=600&q=80"
+                         alt="Superior Room"
+                         class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    <div class="absolute top-4 left-4 bg-dark-bg/80 backdrop-blur px-3 py-1 rounded-full">
+                        <span class="text-sm font-medium">Superior</span>
+                    </div>
+                </div>
+                <div class="p-6">
+                    <h3 class="font-heading text-xl font-semibold mb-2">Superior Room</h3>
+                    <p class="text-slate-400 text-sm mb-4">Kamar nyaman dengan fasilitas standar untuk istirahat yang berkualitas.</p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="text-xs bg-dark-elevated px-2 py-1 rounded">Free Wi-Fi</span>
+                        <span class="text-xs bg-dark-elevated px-2 py-1 rounded">AC</span>
+                        <span class="text-xs bg-dark-elevated px-2 py-1 rounded">TV</span>
+                        <span class="text-xs bg-dark-elevated px-2 py-1 rounded">25m2</span>
+                    </div>
+                    <div class="flex items-center justify-between">
+                        <div>
+                            <span class="text-2xl font-bold text-primary">Rp 500K</span>
+                            <span class="text-slate-400 text-sm">/malam</span>
+                        </div>
+                        <a href="https://wa.me/628115440900?text=Saya%20ingin%20booking%20Superior%20Room"
+                           target="_blank" rel="noopener"
+                           class="bg-primary/20 hover:bg-primary text-primary hover:text-white px-4 py-2 rounded-lg text-sm font-medium transition-colors">
+                            Book Now
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Deluxe Room -->
+            <div class="animate-on-scroll bg-dark-bg rounded-2xl overflow-hidden group hover:ring-2 hover:ring-primary transition-all">
+                <div class="relative h-64 overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&fit=crop&w=600&q=80"
+                         alt="Deluxe Room"
+                         class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    <div class="absolute top-4 left-4 bg-primary px-3 py-1 rounded-full">
+                        <span class="text-sm font-medium">Popular</span>
+                    </div>
+                </div>
+                <div class="p-6">
+                    <h3 class="font-heading text-xl font-semibold mb-2">Deluxe Room</h3>
+                    <p class="text-slate-400 text-sm mb-4">Kamar lebih luas dengan view terbaik dan fasilitas premium.</p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="text-xs bg-dark-elevated px-2 py-1 rounded">Free Wi-Fi</span>
+                        <span class="text-xs bg-dark-elevated px-2 py-1 rounded">AC</span>
+                        <span class="text-xs bg-dark-elevated px-2 py-1 rounded">Smart TV</span>
+                        <span class="text-xs bg-dark-elevated px-2 py-1 rounded">35m2</span>
+                        <span class="text-xs bg-dark-elevated px-2 py-1 rounded">Bathtub</span>
+                    </div>
+                    <div class="flex items-center justify-between">
+                        <div>
+                            <span class="text-2xl font-bold text-primary">Rp 631K</span>
+                            <span class="text-slate-400 text-sm">/malam</span>
+                        </div>
+                        <a href="https://wa.me/628115440900?text=Saya%20ingin%20booking%20Deluxe%20Room"
+                           target="_blank" rel="noopener"
+                           class="bg-primary/20 hover:bg-primary text-primary hover:text-white px-4 py-2 rounded-lg text-sm font-medium transition-colors">
+                            Book Now
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Suite Room -->
+            <div class="animate-on-scroll bg-dark-bg rounded-2xl overflow-hidden group hover:ring-2 hover:ring-primary transition-all">
+                <div class="relative h-64 overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=600&q=80"
+                         alt="Suite Room"
+                         class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    <div class="absolute top-4 left-4 bg-gold px-3 py-1 rounded-full">
+                        <span class="text-sm font-medium text-dark-bg">Premium</span>
+                    </div>
+                </div>
+                <div class="p-6">
+                    <h3 class="font-heading text-xl font-semibold mb-2">Suite Room</h3>
+                    <p class="text-slate-400 text-sm mb-4">Pengalaman mewah dengan ruang tamu terpisah dan fasilitas eksklusif.</p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="text-xs bg-dark-elevated px-2 py-1 rounded">Free Wi-Fi</span>
+                        <span class="text-xs bg-dark-elevated px-2 py-1 rounded">AC</span>
+                        <span class="text-xs bg-dark-elevated px-2 py-1 rounded">Smart TV</span>
+                        <span class="text-xs bg-dark-elevated px-2 py-1 rounded">50m2</span>
+                        <span class="text-xs bg-dark-elevated px-2 py-1 rounded">Living Area</span>
+                    </div>
+                    <div class="flex items-center justify-between">
+                        <div>
+                            <span class="text-2xl font-bold text-primary">Rp 900K</span>
+                            <span class="text-slate-400 text-sm">/malam</span>
+                        </div>
+                        <a href="https://wa.me/628115440900?text=Saya%20ingin%20booking%20Suite%20Room"
+                           target="_blank" rel="noopener"
+                           class="bg-primary/20 hover:bg-primary text-primary hover:text-white px-4 py-2 rounded-lg text-sm font-medium transition-colors">
+                            Book Now
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+```
+
+---
+
+### Task 6: Facilities Section
+
+**Files:**
+- Modify: `Hotel Victora/landing-page/index.html`
+
+**Step 1: Add facilities section**
+
+```html
+<!-- Facilities Section -->
+<section id="facilities" class="py-24 bg-dark-bg">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <!-- Section Header -->
+        <div class="text-center mb-16 animate-on-scroll">
+            <span class="text-primary font-semibold tracking-wider uppercase">Fasilitas</span>
+            <h2 class="font-heading text-3xl sm:text-4xl font-bold mt-4 mb-4">
+                Fasilitas Hotel
+            </h2>
+            <p class="text-slate-400 max-w-2xl mx-auto">
+                Nikmati berbagai fasilitas premium yang kami sediakan untuk kenyamanan Anda selama menginap.
+            </p>
+        </div>
+
+        <!-- Facilities Grid -->
+        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            <!-- Pool -->
+            <div class="animate-on-scroll group bg-dark-card rounded-2xl p-6 hover:bg-dark-elevated transition-colors">
+                <div class="w-14 h-14 bg-primary/20 rounded-xl flex items-center justify-center mb-4 group-hover:bg-primary/30 transition-colors">
+                    <svg class="w-7 h-7 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5.121 17.804A13.937 13.937 0 0112 16c2.5 0 4.847.655 6.879 1.804M15 10a3 3 0 11-6 0 3 3 0 016 0zm6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                    </svg>
+                </div>
+                <h3 class="font-semibold text-lg mb-2">Outdoor Pool</h3>
+                <p class="text-slate-400 text-sm">Kolam renang outdoor dengan pemandangan taman yang asri untuk relaksasi.</p>
+            </div>
+
+            <!-- Spa -->
+            <div class="animate-on-scroll group bg-dark-card rounded-2xl p-6 hover:bg-dark-elevated transition-colors">
+                <div class="w-14 h-14 bg-primary/20 rounded-xl flex items-center justify-center mb-4 group-hover:bg-primary/30 transition-colors">
+                    <svg class="w-7 h-7 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/>
+                    </svg>
+                </div>
+                <h3 class="font-semibold text-lg mb-2">Geuliz Spa</h3>
+                <p class="text-slate-400 text-sm">Spa & wellness center dengan berbagai treatment untuk relaksasi tubuh dan pikiran.</p>
+            </div>
+
+            <!-- Restaurant -->
+            <div class="animate-on-scroll group bg-dark-card rounded-2xl p-6 hover:bg-dark-elevated transition-colors">
+                <div class="w-14 h-14 bg-primary/20 rounded-xl flex items-center justify-center mb-4 group-hover:bg-primary/30 transition-colors">
+                    <svg class="w-7 h-7 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/>
+                    </svg>
+                </div>
+                <h3 class="font-semibold text-lg mb-2">Restaurant</h3>
+                <p class="text-slate-400 text-sm">Restaurant dengan menu lokal dan internasional. Termasuk sarapan untuk tamu hotel.</p>
+            </div>
+
+            <!-- Meeting Room -->
+            <div class="animate-on-scroll group bg-dark-card rounded-2xl p-6 hover:bg-dark-elevated transition-colors">
+                <div class="w-14 h-14 bg-primary/20 rounded-xl flex items-center justify-center mb-4 group-hover:bg-primary/30 transition-colors">
+                    <svg class="w-7 h-7 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/>
+                    </svg>
+                </div>
+                <h3 class="font-semibold text-lg mb-2">Meeting Room</h3>
+                <p class="text-slate-400 text-sm">Ruang meeting modern dengan kapasitas hingga 100 orang untuk berbagai acara bisnis.</p>
+            </div>
+
+            <!-- Free Wi-Fi -->
+            <div class="animate-on-scroll group bg-dark-card rounded-2xl p-6 hover:bg-dark-elevated transition-colors">
+                <div class="w-14 h-14 bg-primary/20 rounded-xl flex items-center justify-center mb-4 group-hover:bg-primary/30 transition-colors">
+                    <svg class="w-7 h-7 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.111 16.404a5.5 5.5 0 017.778 0M12 20h.01m-7.08-7.071c3.904-3.905 10.236-3.905 14.141 0M1.394 9.393c5.857-5.857 15.355-5.857 21.213 0"/>
+                    </svg>
+                </div>
+                <h3 class="font-semibold text-lg mb-2">Free Wi-Fi</h3>
+                <p class="text-slate-400 text-sm">Koneksi internet gratis di seluruh area hotel untuk kebutuhan kerja dan hiburan.</p>
+            </div>
+
+            <!-- Parking -->
+            <div class="animate-on-scroll group bg-dark-card rounded-2xl p-6 hover:bg-dark-elevated transition-colors">
+                <div class="w-14 h-14 bg-primary/20 rounded-xl flex items-center justify-center mb-4 group-hover:bg-primary/30 transition-colors">
+                    <svg class="w-7 h-7 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 8h14M5 8a2 2 0 110-4h14a2 2 0 110 4M5 8v10a2 2 0 002 2h10a2 2 0 002-2V8m-9 4h4"/>
+                    </svg>
+                </div>
+                <h3 class="font-semibold text-lg mb-2">Free Parking</h3>
+                <p class="text-slate-400 text-sm">Area parkir luas dan gratis dengan keamanan 24 jam untuk kendaraan tamu.</p>
+            </div>
+        </div>
+    </div>
+</section>
+```
+
+---
+
+### Task 7: Gallery Section
+
+**Files:**
+- Modify: `Hotel Victora/landing-page/index.html`
+
+**Step 1: Add gallery section**
+
+```html
+<!-- Gallery Section -->
+<section id="gallery" class="py-24 bg-dark-card">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <!-- Section Header -->
+        <div class="text-center mb-16 animate-on-scroll">
+            <span class="text-primary font-semibold tracking-wider uppercase">Galeri</span>
+            <h2 class="font-heading text-3xl sm:text-4xl font-bold mt-4 mb-4">
+                Jelajahi Hotel Kami
+            </h2>
+            <p class="text-slate-400 max-w-2xl mx-auto">
+                Lihat keindahan dan kenyamanan Hotel Royal Victoria melalui galeri foto kami.
+            </p>
+        </div>
+
+        <!-- Gallery Grid -->
+        <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+            <div class="animate-on-scroll col-span-2 row-span-2">
+                <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=800&q=80"
+                     alt="Hotel Exterior"
+                     class="w-full h-full object-cover rounded-2xl hover:opacity-90 transition-opacity cursor-pointer">
+            </div>
+            <div class="animate-on-scroll">
+                <img src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=400&q=80"
+                     alt="Hotel Room"
+                     class="w-full h-48 object-cover rounded-2xl hover:opacity-90 transition-opacity cursor-pointer">
+            </div>
+            <div class="animate-on-scroll">
+                <img src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?auto=format&fit=crop&w=400&q=80"
+                     alt="Swimming Pool"
+                     class="w-full h-48 object-cover rounded-2xl hover:opacity-90 transition-opacity cursor-pointer">
+            </div>
+            <div class="animate-on-scroll">
+                <img src="https://images.unsplash.com/photo-1584132967334-10e028bd69f7?auto=format&fit=crop&w=400&q=80"
+                     alt="Restaurant"
+                     class="w-full h-48 object-cover rounded-2xl hover:opacity-90 transition-opacity cursor-pointer">
+            </div>
+            <div class="animate-on-scroll">
+                <img src="https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&fit=crop&w=400&q=80"
+                     alt="Deluxe Room"
+                     class="w-full h-48 object-cover rounded-2xl hover:opacity-90 transition-opacity cursor-pointer">
+            </div>
+            <div class="animate-on-scroll col-span-2">
+                <img src="https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?auto=format&fit=crop&w=800&q=80"
+                     alt="Hotel Lobby"
+                     class="w-full h-48 object-cover rounded-2xl hover:opacity-90 transition-opacity cursor-pointer">
+            </div>
+        </div>
+    </div>
+</section>
+```
+
+---
+
+### Task 8: Testimonials Section
+
+**Files:**
+- Modify: `Hotel Victora/landing-page/index.html`
+
+**Step 1: Add testimonials section**
+
+```html
+<!-- Testimonials Section -->
+<section class="py-24 bg-dark-bg">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <!-- Section Header -->
+        <div class="text-center mb-16 animate-on-scroll">
+            <span class="text-primary font-semibold tracking-wider uppercase">Testimoni</span>
+            <h2 class="font-heading text-3xl sm:text-4xl font-bold mt-4 mb-4">
+                Apa Kata Tamu Kami
+            </h2>
+            <p class="text-slate-400 max-w-2xl mx-auto">
+                Pengalaman nyata dari tamu yang telah menginap di Hotel Royal Victoria.
+            </p>
+        </div>
+
+        <!-- Testimonial Cards -->
+        <div class="grid md:grid-cols-3 gap-8">
+            <!-- Review 1 -->
+            <div class="animate-on-scroll bg-dark-card rounded-2xl p-8">
+                <div class="flex items-center mb-4">
+                    <div class="flex text-gold">
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                    </div>
+                </div>
+                <p class="text-slate-300 mb-6 italic">
+                    "Hotel lumayan bagus di kota Sangatta. Pelayanan ramah, kamar bersih, dan breakfast enak. Recommended untuk yang berkunjung ke Kutai Timur!"
+                </p>
+                <div class="flex items-center">
+                    <div class="w-12 h-12 bg-primary/20 rounded-full flex items-center justify-center mr-4">
+                        <span class="font-semibold text-primary">A</span>
+                    </div>
+                    <div>
+                        <p class="font-semibold">Ahmad Rizki</p>
+                        <p class="text-slate-400 text-sm">Google Review - 5 bulan lalu</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Review 2 -->
+            <div class="animate-on-scroll bg-dark-card rounded-2xl p-8">
+                <div class="flex items-center mb-4">
+                    <div class="flex text-gold">
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                        <svg class="w-5 h-5 text-slate-600" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                    </div>
+                </div>
+                <p class="text-slate-300 mb-6 italic">
+                    "Stayed here for MTQ event. Room 240 is amazing, twin-bed with extra bed. Staff sangat helpful. Kolam renang bagus untuk relaksasi."
+                </p>
+                <div class="flex items-center">
+                    <div class="w-12 h-12 bg-primary/20 rounded-full flex items-center justify-center mr-4">
+                        <span class="font-semibold text-primary">K</span>
+                    </div>
+                    <div>
+                        <p class="font-semibold">Kadir S.</p>
+                        <p class="text-slate-400 text-sm">TripAdvisor - 6 bulan lalu</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Review 3 -->
+            <div class="animate-on-scroll bg-dark-card rounded-2xl p-8">
+                <div class="flex items-center mb-4">
+                    <div class="flex text-gold">
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                        <svg class="w-5 h-5 text-slate-600" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                    </div>
+                </div>
+                <p class="text-slate-300 mb-6 italic">
+                    "Good hotel for business trip. WiFi connection needs improvement but overall experience was great. Will stay again."
+                </p>
+                <div class="flex items-center">
+                    <div class="w-12 h-12 bg-primary/20 rounded-full flex items-center justify-center mr-4">
+                        <span class="font-semibold text-primary">T</span>
+                    </div>
+                    <div>
+                        <p class="font-semibold">Trip.com Member</p>
+                        <p class="text-slate-400 text-sm">Trip.com - 8 bulan lalu</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+```
+
+---
+
+### Task 9: Contact & Location Section
+
+**Files:**
+- Modify: `Hotel Victora/landing-page/index.html`
+
+**Step 1: Add contact section**
+
+```html
+<!-- Contact Section -->
+<section id="contact" class="py-24 bg-dark-card">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid lg:grid-cols-2 gap-16">
+            <!-- Left Column - Map -->
+            <div class="animate-on-scroll">
+                <div class="rounded-2xl overflow-hidden h-96 lg:h-full min-h-[400px]">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.6714699999997!2d117.54089999999999!3d0.4866!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x320db3ab3d5c5555%3A0x5555555555555555!2sHotel%20Royal%20Victoria!5e0!3m2!1sen!2sid!4v1234567890"
+                        width="100%"
+                        height="100%"
+                        style="border:0;"
+                        allowfullscreen=""
+                        loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"
+                        class="grayscale hover:grayscale-0 transition-all duration-500">
+                    </iframe>
+                </div>
+            </div>
+
+            <!-- Right Column - Contact Info -->
+            <div class="animate-on-scroll">
+                <span class="text-primary font-semibold tracking-wider uppercase">Kontak</span>
+                <h2 class="font-heading text-3xl sm:text-4xl font-bold mt-4 mb-6">
+                    Hubungi Kami
+                </h2>
+                <p class="text-slate-400 mb-8">
+                    Tim kami siap membantu Anda 24/7. Hubungi kami untuk reservasi atau pertanyaan lainnya.
+                </p>
+
+                <!-- Contact Cards -->
+                <div class="space-y-4 mb-8">
+                    <div class="flex items-center space-x-4 bg-dark-bg rounded-xl p-4">
+                        <div class="w-12 h-12 bg-primary/20 rounded-lg flex items-center justify-center flex-shrink-0">
+                            <svg class="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
+                            </svg>
+                        </div>
+                        <div>
+                            <p class="font-semibold">Alamat</p>
+                            <p class="text-slate-400 text-sm">Jl. A. W. Syahrani No. 1 RT. 04, Teluk Lingga, Sangatta Utara, Kutai Timur 75683</p>
+                        </div>
+                    </div>
+
+                    <div class="flex items-center space-x-4 bg-dark-bg rounded-xl p-4">
+                        <div class="w-12 h-12 bg-primary/20 rounded-lg flex items-center justify-center flex-shrink-0">
+                            <svg class="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
+                            </svg>
+                        </div>
+                        <div>
+                            <p class="font-semibold">Telepon</p>
+                            <a href="tel:+628115440900" class="text-slate-400 text-sm hover:text-primary transition-colors">+62 811-544-0900</a>
+                        </div>
+                    </div>
+
+                    <a href="https://wa.me/628115440900" target="_blank" rel="noopener"
+                       class="flex items-center space-x-4 bg-green-900/30 hover:bg-green-900/50 rounded-xl p-4 transition-colors group">
+                        <div class="w-12 h-12 bg-green-500/20 rounded-lg flex items-center justify-center flex-shrink-0">
+                            <svg class="w-6 h-6 text-green-500" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+                            </svg>
+                        </div>
+                        <div>
+                            <p class="font-semibold text-green-400">WhatsApp</p>
+                            <p class="text-slate-400 text-sm group-hover:text-green-400 transition-colors">Chat langsung untuk reservasi cepat</p>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Check-in/out Info -->
+                <div class="bg-dark-bg rounded-xl p-6">
+                    <h4 class="font-semibold mb-4">Informasi Check-in</h4>
+                    <div class="grid grid-cols-2 gap-4">
+                        <div>
+                            <p class="text-slate-400 text-sm">Check-in</p>
+                            <p class="font-semibold">12:00</p>
+                        </div>
+                        <div>
+                            <p class="text-slate-400 text-sm">Check-out</p>
+                            <p class="font-semibold">12:00</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+```
+
+---
+
+### Task 10: CTA Section & Footer
+
+**Files:**
+- Modify: `Hotel Victora/landing-page/index.html`
+
+**Step 1: Add CTA section**
+
+```html
+<!-- CTA Section -->
+<section class="py-24 bg-gradient-to-r from-primary-dark via-primary to-primary-light">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h2 class="font-heading text-3xl sm:text-4xl font-bold mb-6">
+            Siap Merasakan Kenyamanan Royal?
+        </h2>
+        <p class="text-xl text-white/80 mb-8">
+            Book sekarang dan dapatkan pengalaman menginap terbaik di Sangatta, Kutai Timur.
+        </p>
+
+        <!-- CTA Buttons -->
+        <div class="flex flex-col sm:flex-row gap-4 justify-center mb-12">
+            <a href="https://wa.me/628115440900?text=Halo,%20saya%20ingin%20reservasi%20kamar"
+               target="_blank" rel="noopener"
+               class="inline-flex items-center justify-center bg-white text-primary px-8 py-4 rounded-lg font-semibold hover:bg-slate-100 transition-colors">
+                <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+                </svg>
+                Reservasi via WhatsApp
+            </a>
+            <a href="tel:+628115440900"
+               class="inline-flex items-center justify-center border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-colors">
+                <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
+                </svg>
+                Telepon Sekarang
+            </a>
+        </div>
+
+        <!-- OTA Links -->
+        <p class="text-white/60 text-sm mb-4">Atau book melalui platform favorit Anda:</p>
+        <div class="flex flex-wrap justify-center gap-4">
+            <a href="#" class="bg-white/10 hover:bg-white/20 px-4 py-2 rounded-lg text-sm transition-colors">Traveloka</a>
+            <a href="#" class="bg-white/10 hover:bg-white/20 px-4 py-2 rounded-lg text-sm transition-colors">Agoda</a>
+            <a href="#" class="bg-white/10 hover:bg-white/20 px-4 py-2 rounded-lg text-sm transition-colors">Booking.com</a>
+            <a href="#" class="bg-white/10 hover:bg-white/20 px-4 py-2 rounded-lg text-sm transition-colors">TripAdvisor</a>
+        </div>
+    </div>
+</section>
+```
+
+**Step 2: Add footer**
+
+```html
+<!-- Footer -->
+<footer class="bg-dark-bg py-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid md:grid-cols-4 gap-12 mb-12">
+            <!-- Brand -->
+            <div class="md:col-span-2">
+                <div class="flex items-center space-x-3 mb-4">
+                    <div class="w-12 h-12 bg-primary rounded-full flex items-center justify-center">
+                        <span class="font-heading text-xl font-bold">RV</span>
+                    </div>
+                    <span class="font-heading text-xl font-semibold">Royal Victoria</span>
+                </div>
+                <p class="text-slate-400 mb-6 max-w-md">
+                    Hotel bintang 4 terbaik di Sangatta, Kutai Timur. Pengalaman menginap premium dengan fasilitas lengkap dan pelayanan terbaik.
+                </p>
+                <div class="flex space-x-4">
+                    <a href="https://instagram.com/royalsangatta" target="_blank" rel="noopener"
+                       class="w-10 h-10 bg-dark-card hover:bg-primary rounded-lg flex items-center justify-center transition-colors">
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                        </svg>
+                    </a>
+                    <a href="https://facebook.com/hotelroyalvictoriaborneo" target="_blank" rel="noopener"
+                       class="w-10 h-10 bg-dark-card hover:bg-primary rounded-lg flex items-center justify-center transition-colors">
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                        </svg>
+                    </a>
+                    <a href="https://wa.me/628115440900" target="_blank" rel="noopener"
+                       class="w-10 h-10 bg-dark-card hover:bg-green-500 rounded-lg flex items-center justify-center transition-colors">
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Quick Links -->
+            <div>
+                <h4 class="font-semibold mb-4">Quick Links</h4>
+                <ul class="space-y-2 text-slate-400">
+                    <li><a href="#home" class="hover:text-primary transition-colors">Home</a></li>
+                    <li><a href="#rooms" class="hover:text-primary transition-colors">Rooms</a></li>
+                    <li><a href="#facilities" class="hover:text-primary transition-colors">Facilities</a></li>
+                    <li><a href="#gallery" class="hover:text-primary transition-colors">Gallery</a></li>
+                    <li><a href="#contact" class="hover:text-primary transition-colors">Contact</a></li>
+                </ul>
+            </div>
+
+            <!-- Contact -->
+            <div>
+                <h4 class="font-semibold mb-4">Kontak</h4>
+                <ul class="space-y-2 text-slate-400 text-sm">
+                    <li>Jl. A. W. Syahrani No. 1</li>
+                    <li>Sangatta Utara, Kutai Timur</li>
+                    <li>Kalimantan Timur 75683</li>
+                    <li class="pt-2">
+                        <a href="tel:+628115440900" class="hover:text-primary transition-colors">+62 811-544-0900</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Bottom Bar -->
+        <div class="border-t border-slate-800 pt-8 flex flex-col md:flex-row justify-between items-center">
+            <p class="text-slate-500 text-sm">
+                &copy; 2026 Hotel Royal Victoria. All rights reserved.
+            </p>
+            <p class="text-slate-500 text-sm mt-4 md:mt-0">
+                Website Preview by <a href="https://alurweb.com" target="_blank" rel="noopener" class="text-primary hover:underline">ALURWEB</a>
+            </p>
+        </div>
+    </div>
+</footer>
+```
+
+---
+
+## Expected Results
+
+### Sebelum (Website Lama - Skor 28/100)
+- 4 dari 6 halaman kosong
+- Tidak ada SEO
+- Design outdated
+- Tidak mobile-friendly optimal
+- Tidak ada booking system
+
+### Sesudah (Landing Page Preview)
+- Single-page fully functional
+- Modern dark theme premium
+- SEO-ready dengan meta tags lengkap
+- Mobile-first responsive
+- WhatsApp CTA prominent
+- Smooth animations
+- Fast loading (CDN-based)
+
+---
+
+## Notes for Implementation
+
+1. **Images:** Menggunakan placeholder dari Unsplash. Pada versi production, ganti dengan foto asli hotel.
+
+2. **Google Maps:** Embed placeholder. Perlu update dengan coordinates yang benar.
+
+3. **Harga:** Menggunakan harga dari data (Rp 631.662). Sesuaikan dengan rate card terbaru hotel.
+
+4. **WhatsApp:** Semua link sudah mengarah ke +62 811-544-0900.
+
+5. **Skills yang bisa digunakan:**
+   - `remotion` - Untuk membuat video promosi landing page
+   - `brand-identity` - Untuk consistency design tokens
+   - `brainstorming` - Untuk ideasi konten tambahan
+
+---
+
+## Execution Options
+
+**Plan complete dan saved ke `Hotel Victora/PLAN-landing-page-preview.md`.**
+
+**Pilihan eksekusi:**
+
+1. **Subagent-Driven (sesi ini)** - Saya dispatch fresh subagent per task, review between tasks, fast iteration
+
+2. **Manual Implementation** - Anda implementasi sendiri mengikuti step-by-step guide di atas
+
+**Pilih pendekatan yang Anda inginkan.**

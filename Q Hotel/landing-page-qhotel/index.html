@@ -1,0 +1,727 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q Hotel Sangatta — Hotel Modern Terbaik di Sangatta, Kutai Timur</title>
+    <meta name="description" content="Q Hotel Sangatta — hotel modern dengan rating 8.9/10 di Traveloka. Lokasi strategis di Thomas Square, Sangatta Utara. Dilengkapi Q Resto & Sixth Rooftop Lounge.">
+    <meta property="og:title" content="Q Hotel Sangatta — Hotel Modern Terbaik di Sangatta">
+    <meta property="og:description" content="Hotel modern dengan rating 8.9/10 di Traveloka. Lokasi strategis di Thomas Square, Sangatta. Q Resto & Sixth Rooftop Lounge.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="assets/images/hotel/exterior-1.jpg">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'dark-bg': '#0F172A',
+                        'dark-card': '#1E293B',
+                        'dark-elevated': '#334155',
+                        'primary': '#3B82F6',
+                        'primary-light': '#60A5FA',
+                        'primary-dark': '#2563EB',
+                        'gold': '#F59E0B',
+                    },
+                    fontFamily: {
+                        'heading': ['Poppins', 'sans-serif'],
+                        'body': ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/custom.css">
+</head>
+<body class="bg-dark-bg text-slate-100 font-body">
+
+    <!-- ========== 1. NAVIGATION ========== -->
+    <nav id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16 md:h-20">
+                <a href="#" class="flex items-center gap-2">
+                    <div class="w-10 h-10 bg-primary rounded-lg flex items-center justify-center">
+                        <span class="text-white font-heading font-bold text-xl">Q</span>
+                    </div>
+                    <div>
+                        <span class="text-white font-heading font-semibold text-lg">Q Hotel</span>
+                        <span class="hidden sm:inline text-slate-400 text-xs ml-1">Sangatta</span>
+                    </div>
+                </a>
+                <div class="hidden md:flex items-center gap-8">
+                    <a href="#home" class="text-slate-300 hover:text-white transition-colors text-sm font-medium">Home</a>
+                    <a href="#rooms" class="text-slate-300 hover:text-white transition-colors text-sm font-medium">Rooms</a>
+                    <a href="#facilities" class="text-slate-300 hover:text-white transition-colors text-sm font-medium">Facilities</a>
+                    <a href="#gallery" class="text-slate-300 hover:text-white transition-colors text-sm font-medium">Gallery</a>
+                    <a href="#location" class="text-slate-300 hover:text-white transition-colors text-sm font-medium">Contact</a>
+                    <a href="https://wa.me/6282310151555?text=Halo,%20saya%20ingin%20reservasi%20kamar%20di%20Q%20Hotel%20Sangatta" target="_blank" rel="noopener"
+                       class="bg-green-600 hover:bg-green-700 text-white px-5 py-2.5 rounded-lg text-sm font-semibold transition-all hover:shadow-lg hover:shadow-green-600/25">
+                        Book Now
+                    </a>
+                </div>
+                <button id="mobile-menu-btn" class="md:hidden text-white p-2" aria-label="Menu">
+                    <i data-lucide="menu" class="w-6 h-6"></i>
+                </button>
+            </div>
+            <div id="mobile-menu" class="hidden md:hidden pb-4 border-t border-slate-700/50">
+                <div class="flex flex-col gap-2 pt-4">
+                    <a href="#home" class="text-slate-300 hover:text-white py-2 px-3 rounded-lg hover:bg-slate-800/50">Home</a>
+                    <a href="#rooms" class="text-slate-300 hover:text-white py-2 px-3 rounded-lg hover:bg-slate-800/50">Rooms</a>
+                    <a href="#facilities" class="text-slate-300 hover:text-white py-2 px-3 rounded-lg hover:bg-slate-800/50">Facilities</a>
+                    <a href="#gallery" class="text-slate-300 hover:text-white py-2 px-3 rounded-lg hover:bg-slate-800/50">Gallery</a>
+                    <a href="#location" class="text-slate-300 hover:text-white py-2 px-3 rounded-lg hover:bg-slate-800/50">Contact</a>
+                    <a href="https://wa.me/6282310151555?text=Halo,%20saya%20ingin%20reservasi%20kamar%20di%20Q%20Hotel%20Sangatta" target="_blank" rel="noopener"
+                       class="bg-green-600 text-white py-2.5 px-3 rounded-lg text-center font-semibold mt-2">
+                        Book Now via WhatsApp
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ========== 2. HERO SECTION ========== -->
+    <section id="home" class="relative min-h-screen flex items-center">
+        <div class="absolute inset-0">
+            <img src="assets/images/hotel/exterior-1.jpg"
+                 alt="Q Hotel Sangatta" class="w-full h-full object-cover" loading="eager">
+            <div class="hero-gradient absolute inset-0"></div>
+        </div>
+        <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full pt-24 pb-16">
+            <div class="grid lg:grid-cols-5 gap-8 items-center">
+                <!-- Hero Content -->
+                <div class="lg:col-span-3 animate-on-scroll">
+                    <div class="inline-flex items-center gap-2 bg-gold/10 border border-gold/30 rounded-full px-4 py-1.5 mb-6">
+                        <div class="flex items-center gap-0.5">
+                            <i data-lucide="star" class="w-4 h-4 text-gold fill-gold"></i>
+                            <i data-lucide="star" class="w-4 h-4 text-gold fill-gold"></i>
+                        </div>
+                        <span class="text-gold text-sm font-medium">8.9/10 Traveloka &bull; 41 Reviews</span>
+                    </div>
+                    <h1 class="font-heading text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-4 leading-tight">
+                        Q Hotel<br><span class="text-primary-light">Sangatta</span>
+                    </h1>
+                    <p class="text-slate-300 text-lg sm:text-xl mb-8 max-w-xl leading-relaxed">
+                        Hotel modern terbaik di Sangatta dengan Q Resto &amp; Sixth Rooftop Lounge. Lokasi strategis di Thomas Square Complex.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <a href="https://wa.me/6282310151555?text=Halo,%20saya%20ingin%20reservasi%20kamar%20di%20Q%20Hotel%20Sangatta" target="_blank" rel="noopener"
+                           class="inline-flex items-center justify-center gap-2 bg-green-600 hover:bg-green-700 text-white px-8 py-4 rounded-xl font-semibold text-lg transition-all hover:shadow-lg hover:shadow-green-600/25 hover:-translate-y-0.5">
+                            <i data-lucide="message-circle" class="w-5 h-5"></i>
+                            Reservasi via WhatsApp
+                        </a>
+                        <a href="#rooms"
+                           class="inline-flex items-center justify-center gap-2 border-2 border-slate-400/30 hover:border-primary text-white px-8 py-4 rounded-xl font-semibold text-lg transition-all hover:-translate-y-0.5">
+                            <i data-lucide="bed-double" class="w-5 h-5"></i>
+                            Lihat Kamar
+                        </a>
+                    </div>
+                </div>
+                <!-- Quick Booking Widget -->
+                <div class="lg:col-span-2 hidden lg:block animate-on-scroll">
+                    <div class="glass-card rounded-2xl p-6">
+                        <h3 class="font-heading font-semibold text-white text-lg mb-4">Quick Booking</h3>
+                        <div class="space-y-4">
+                            <div>
+                                <label class="text-slate-400 text-sm mb-1 block">Check-in</label>
+                                <input type="date" id="check-in" class="w-full bg-slate-800/50 border border-slate-600/50 rounded-lg px-4 py-3 text-white text-sm focus:outline-none focus:border-primary">
+                            </div>
+                            <div>
+                                <label class="text-slate-400 text-sm mb-1 block">Check-out</label>
+                                <input type="date" id="check-out" class="w-full bg-slate-800/50 border border-slate-600/50 rounded-lg px-4 py-3 text-white text-sm focus:outline-none focus:border-primary">
+                            </div>
+                            <div>
+                                <label class="text-slate-400 text-sm mb-1 block">Jumlah Tamu</label>
+                                <select id="guests" class="w-full bg-slate-800/50 border border-slate-600/50 rounded-lg px-4 py-3 text-white text-sm focus:outline-none focus:border-primary">
+                                    <option value="1">1 Tamu</option>
+                                    <option value="2" selected>2 Tamu</option>
+                                    <option value="3">3 Tamu</option>
+                                    <option value="4">4+ Tamu</option>
+                                </select>
+                            </div>
+                            <div class="pt-2">
+                                <p class="text-slate-400 text-sm">Mulai dari</p>
+                                <p class="text-2xl font-heading font-bold text-primary-light">Rp 210.000<span class="text-sm font-normal text-slate-400">/malam</span></p>
+                            </div>
+                            <button id="booking-btn"
+                               class="block w-full bg-primary hover:bg-primary-dark text-white text-center py-3.5 rounded-xl font-semibold transition-all hover:shadow-lg hover:shadow-primary/25">
+                                Check Availability
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce">
+            <i data-lucide="chevron-down" class="w-6 h-6 text-slate-400"></i>
+        </div>
+    </section>
+
+    <!-- ========== 3. ABOUT SECTION ========== -->
+    <section id="about" class="py-20 lg:py-28">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+                <div class="animate-on-scroll">
+                    <span class="text-primary font-medium text-sm uppercase tracking-widest">Tentang Kami</span>
+                    <h2 class="font-heading text-3xl sm:text-4xl font-bold text-white mt-3 mb-6">Hotel Modern Terbaik<br>di Kota Sangatta</h2>
+                    <p class="text-slate-400 leading-relaxed mb-4">
+                        Q Hotel Sangatta hadir sebagai pilihan akomodasi modern di jantung kota Sangatta, Kutai Timur.
+                        Berlokasi di Thomas Square Complex, kami menawarkan kenyamanan dan kemudahan akses ke pusat bisnis dan wisata.
+                    </p>
+                    <p class="text-slate-400 leading-relaxed mb-8">
+                        Dilengkapi dengan <strong class="text-white">Q Resto</strong> untuk pengalaman kuliner terbaik dan
+                        <strong class="text-white">Sixth Rooftop Lounge</strong> untuk menikmati pemandangan kota dari ketinggian.
+                        Staf kami yang ramah dan energik siap melayani kebutuhan Anda 24 jam.
+                    </p>
+                    <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+                        <div class="bg-dark-card rounded-xl p-4 border border-slate-700/50">
+                            <i data-lucide="map-pin" class="w-8 h-8 text-primary mb-2"></i>
+                            <h4 class="text-white font-semibold text-sm">Lokasi Strategis</h4>
+                            <p class="text-slate-400 text-xs mt-1">Thomas Square Complex, pusat kota</p>
+                        </div>
+                        <div class="bg-dark-card rounded-xl p-4 border border-slate-700/50">
+                            <i data-lucide="utensils" class="w-8 h-8 text-primary mb-2"></i>
+                            <h4 class="text-white font-semibold text-sm">Q Resto &amp; Rooftop</h4>
+                            <p class="text-slate-400 text-xs mt-1">Kuliner &amp; rooftop lounge</p>
+                        </div>
+                        <div class="bg-dark-card rounded-xl p-4 border border-slate-700/50">
+                            <i data-lucide="shield-check" class="w-8 h-8 text-primary mb-2"></i>
+                            <h4 class="text-white font-semibold text-sm">Modern &amp; Bersih</h4>
+                            <p class="text-slate-400 text-xs mt-1">Skor kebersihan 8.6/10</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="animate-on-scroll">
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="glass-card rounded-2xl p-6 text-center">
+                            <div class="text-4xl font-heading font-bold text-primary-light" data-target="89">0</div>
+                            <div class="text-slate-400 text-sm mt-1">Skor Traveloka /100</div>
+                        </div>
+                        <div class="glass-card rounded-2xl p-6 text-center">
+                            <div class="text-4xl font-heading font-bold text-gold" data-target="41">0</div>
+                            <div class="text-slate-400 text-sm mt-1">Reviews</div>
+                        </div>
+                        <div class="glass-card rounded-2xl p-6 text-center">
+                            <div class="text-4xl font-heading font-bold text-green-400">24</div>
+                            <div class="text-slate-400 text-sm mt-1">Jam Front Desk</div>
+                        </div>
+                        <div class="glass-card rounded-2xl p-6 text-center">
+                            <div class="text-4xl font-heading font-bold text-white">3</div>
+                            <div class="text-slate-400 text-sm mt-1">Venue dalam 1 Lokasi</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== 4. ROOMS SECTION ========== -->
+    <section id="rooms" class="py-20 lg:py-28 bg-dark-card/50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center animate-on-scroll mb-12">
+                <span class="text-primary font-medium text-sm uppercase tracking-widest">Kamar Kami</span>
+                <h2 class="font-heading text-3xl sm:text-4xl font-bold text-white mt-3 mb-4">Pilih Kamar Anda</h2>
+                <p class="text-slate-400 max-w-2xl mx-auto">Nikmati kenyamanan kamar modern dengan fasilitas lengkap. Setiap kamar dilengkapi AC, WiFi gratis, dan TV kabel.</p>
+            </div>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Q-Budget -->
+                <div class="animate-on-scroll group">
+                    <div class="bg-dark-card rounded-2xl overflow-hidden border border-slate-700/50 hover:border-primary/50 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-primary/5">
+                        <div class="relative overflow-hidden">
+                            <img src="assets/images/hotel/room-1.jpg"
+                                 alt="Q-Budget Room" class="w-full h-56 object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy">
+                            <div class="absolute top-4 left-4">
+                                <span class="bg-primary text-white text-xs font-semibold px-3 py-1.5 rounded-full">Budget Friendly</span>
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="font-heading text-xl font-semibold text-white mb-2">Q-Budget</h3>
+                            <p class="text-slate-400 text-sm mb-4">Kamar nyaman untuk solo traveler dengan semua kebutuhan dasar.</p>
+                            <div class="flex flex-wrap gap-3 mb-4">
+                                <span class="inline-flex items-center gap-1 text-slate-400 text-xs"><i data-lucide="wifi" class="w-3.5 h-3.5"></i> WiFi</span>
+                                <span class="inline-flex items-center gap-1 text-slate-400 text-xs"><i data-lucide="snowflake" class="w-3.5 h-3.5"></i> AC</span>
+                                <span class="inline-flex items-center gap-1 text-slate-400 text-xs"><i data-lucide="tv" class="w-3.5 h-3.5"></i> TV</span>
+                            </div>
+                            <div class="flex items-center justify-between pt-4 border-t border-slate-700/50">
+                                <div>
+                                    <span class="text-primary-light font-heading font-bold text-xl">Rp 210.000</span>
+                                    <span class="text-slate-500 text-sm">/malam</span>
+                                </div>
+                                <a href="https://wa.me/6282310151555?text=Halo,%20saya%20tertarik%20dengan%20kamar%20Q-Budget%20di%20Q%20Hotel%20Sangatta.%20Apakah%20tersedia?" target="_blank" rel="noopener"
+                                   class="bg-primary hover:bg-primary-dark text-white px-5 py-2.5 rounded-lg text-sm font-semibold transition-all">Book Now</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Deluxe King -->
+                <div class="animate-on-scroll group">
+                    <div class="bg-dark-card rounded-2xl overflow-hidden border border-gold/30 hover:border-gold/60 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-gold/5">
+                        <div class="relative overflow-hidden">
+                            <img src="assets/images/hotel/room-2.jpg"
+                                 alt="Deluxe King Room" class="w-full h-56 object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy">
+                            <div class="absolute top-4 left-4">
+                                <span class="bg-gold text-dark-bg text-xs font-bold px-3 py-1.5 rounded-full">Popular</span>
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="font-heading text-xl font-semibold text-white mb-2">Deluxe King</h3>
+                            <p class="text-slate-400 text-sm mb-4">Kamar luas dengan king bed dan fasilitas premium untuk kenyamanan maksimal.</p>
+                            <div class="flex flex-wrap gap-3 mb-4">
+                                <span class="inline-flex items-center gap-1 text-slate-400 text-xs"><i data-lucide="wifi" class="w-3.5 h-3.5"></i> WiFi</span>
+                                <span class="inline-flex items-center gap-1 text-slate-400 text-xs"><i data-lucide="snowflake" class="w-3.5 h-3.5"></i> AC</span>
+                                <span class="inline-flex items-center gap-1 text-slate-400 text-xs"><i data-lucide="tv" class="w-3.5 h-3.5"></i> TV</span>
+                                <span class="inline-flex items-center gap-1 text-slate-400 text-xs"><i data-lucide="lock" class="w-3.5 h-3.5"></i> Safe</span>
+                                <span class="inline-flex items-center gap-1 text-slate-400 text-xs"><i data-lucide="refrigerator" class="w-3.5 h-3.5"></i> Minibar</span>
+                            </div>
+                            <div class="flex items-center justify-between pt-4 border-t border-slate-700/50">
+                                <div>
+                                    <span class="text-gold font-heading font-bold text-xl">Rp 500.000</span>
+                                    <span class="text-slate-500 text-sm">/malam</span>
+                                </div>
+                                <a href="https://wa.me/6282310151555?text=Halo,%20saya%20tertarik%20dengan%20kamar%20Deluxe%20King%20di%20Q%20Hotel%20Sangatta.%20Apakah%20tersedia?" target="_blank" rel="noopener"
+                                   class="bg-gold hover:bg-amber-600 text-dark-bg px-5 py-2.5 rounded-lg text-sm font-bold transition-all">Book Now</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Standard -->
+                <div class="animate-on-scroll group">
+                    <div class="bg-dark-card rounded-2xl overflow-hidden border border-slate-700/50 hover:border-primary/50 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-primary/5">
+                        <div class="relative overflow-hidden">
+                            <img src="assets/images/hotel/room-3.jpg"
+                                 alt="Standard Room" class="w-full h-56 object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy">
+                        </div>
+                        <div class="p-6">
+                            <h3 class="font-heading text-xl font-semibold text-white mb-2">Standard</h3>
+                            <p class="text-slate-400 text-sm mb-4">Kamar standar yang nyaman untuk pasangan atau tamu bisnis.</p>
+                            <div class="flex flex-wrap gap-3 mb-4">
+                                <span class="inline-flex items-center gap-1 text-slate-400 text-xs"><i data-lucide="wifi" class="w-3.5 h-3.5"></i> WiFi</span>
+                                <span class="inline-flex items-center gap-1 text-slate-400 text-xs"><i data-lucide="snowflake" class="w-3.5 h-3.5"></i> AC</span>
+                                <span class="inline-flex items-center gap-1 text-slate-400 text-xs"><i data-lucide="tv" class="w-3.5 h-3.5"></i> TV</span>
+                                <span class="inline-flex items-center gap-1 text-slate-400 text-xs"><i data-lucide="droplets" class="w-3.5 h-3.5"></i> Hot Water</span>
+                            </div>
+                            <div class="flex items-center justify-between pt-4 border-t border-slate-700/50">
+                                <div>
+                                    <span class="text-primary-light font-heading font-bold text-xl">Rp 350.000</span>
+                                    <span class="text-slate-500 text-sm">/malam</span>
+                                </div>
+                                <a href="https://wa.me/6282310151555?text=Halo,%20saya%20tertarik%20dengan%20kamar%20Standard%20di%20Q%20Hotel%20Sangatta.%20Apakah%20tersedia?" target="_blank" rel="noopener"
+                                   class="bg-primary hover:bg-primary-dark text-white px-5 py-2.5 rounded-lg text-sm font-semibold transition-all">Book Now</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== 5. FACILITIES SECTION ========== -->
+    <section id="facilities" class="py-20 lg:py-28">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center animate-on-scroll mb-12">
+                <span class="text-primary font-medium text-sm uppercase tracking-widest">Fasilitas</span>
+                <h2 class="font-heading text-3xl sm:text-4xl font-bold text-white mt-3 mb-4">Fasilitas Lengkap untuk Kenyamanan Anda</h2>
+                <p class="text-slate-400 max-w-2xl mx-auto">Kami menyediakan berbagai fasilitas untuk memastikan pengalaman menginap yang nyaman dan berkesan.</p>
+            </div>
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 lg:gap-6">
+                <div class="animate-on-scroll glass-card rounded-xl p-5 text-center hover:border-primary/30 transition-all group">
+                    <div class="w-12 h-12 mx-auto bg-primary/10 rounded-xl flex items-center justify-center mb-3 group-hover:bg-primary/20 transition-colors">
+                        <i data-lucide="wifi" class="w-6 h-6 text-primary"></i>
+                    </div>
+                    <h4 class="text-white font-semibold text-sm">Free WiFi</h4>
+                    <p class="text-slate-500 text-xs mt-1">Seluruh area hotel</p>
+                </div>
+                <div class="animate-on-scroll glass-card rounded-xl p-5 text-center hover:border-primary/30 transition-all group">
+                    <div class="w-12 h-12 mx-auto bg-primary/10 rounded-xl flex items-center justify-center mb-3 group-hover:bg-primary/20 transition-colors">
+                        <i data-lucide="utensils" class="w-6 h-6 text-primary"></i>
+                    </div>
+                    <h4 class="text-white font-semibold text-sm">Q Resto</h4>
+                    <p class="text-slate-500 text-xs mt-1">Restaurant &amp; breakfast</p>
+                </div>
+                <div class="animate-on-scroll glass-card rounded-xl p-5 text-center hover:border-primary/30 transition-all group">
+                    <div class="w-12 h-12 mx-auto bg-primary/10 rounded-xl flex items-center justify-center mb-3 group-hover:bg-primary/20 transition-colors">
+                        <i data-lucide="wine" class="w-6 h-6 text-primary"></i>
+                    </div>
+                    <h4 class="text-white font-semibold text-sm">Sixth Rooftop</h4>
+                    <p class="text-slate-500 text-xs mt-1">Rooftop lounge &amp; bar</p>
+                </div>
+                <div class="animate-on-scroll glass-card rounded-xl p-5 text-center hover:border-primary/30 transition-all group">
+                    <div class="w-12 h-12 mx-auto bg-primary/10 rounded-xl flex items-center justify-center mb-3 group-hover:bg-primary/20 transition-colors">
+                        <i data-lucide="car" class="w-6 h-6 text-primary"></i>
+                    </div>
+                    <h4 class="text-white font-semibold text-sm">Free Parking</h4>
+                    <p class="text-slate-500 text-xs mt-1">Parkir luas &amp; gratis</p>
+                </div>
+                <div class="animate-on-scroll glass-card rounded-xl p-5 text-center hover:border-primary/30 transition-all group">
+                    <div class="w-12 h-12 mx-auto bg-primary/10 rounded-xl flex items-center justify-center mb-3 group-hover:bg-primary/20 transition-colors">
+                        <i data-lucide="coffee" class="w-6 h-6 text-primary"></i>
+                    </div>
+                    <h4 class="text-white font-semibold text-sm">Free Breakfast</h4>
+                    <p class="text-slate-500 text-xs mt-1">Sarapan gratis setiap hari</p>
+                </div>
+                <div class="animate-on-scroll glass-card rounded-xl p-5 text-center hover:border-primary/30 transition-all group">
+                    <div class="w-12 h-12 mx-auto bg-primary/10 rounded-xl flex items-center justify-center mb-3 group-hover:bg-primary/20 transition-colors">
+                        <i data-lucide="presentation" class="w-6 h-6 text-primary"></i>
+                    </div>
+                    <h4 class="text-white font-semibold text-sm">Meeting Room</h4>
+                    <p class="text-slate-500 text-xs mt-1">Ruang rapat &amp; konferensi</p>
+                </div>
+                <div class="animate-on-scroll glass-card rounded-xl p-5 text-center hover:border-primary/30 transition-all group">
+                    <div class="w-12 h-12 mx-auto bg-primary/10 rounded-xl flex items-center justify-center mb-3 group-hover:bg-primary/20 transition-colors">
+                        <i data-lucide="shirt" class="w-6 h-6 text-primary"></i>
+                    </div>
+                    <h4 class="text-white font-semibold text-sm">Laundry</h4>
+                    <p class="text-slate-500 text-xs mt-1">Layanan laundry &amp; dry clean</p>
+                </div>
+                <div class="animate-on-scroll glass-card rounded-xl p-5 text-center hover:border-primary/30 transition-all group">
+                    <div class="w-12 h-12 mx-auto bg-primary/10 rounded-xl flex items-center justify-center mb-3 group-hover:bg-primary/20 transition-colors">
+                        <i data-lucide="clock" class="w-6 h-6 text-primary"></i>
+                    </div>
+                    <h4 class="text-white font-semibold text-sm">24 Jam Resepsi</h4>
+                    <p class="text-slate-500 text-xs mt-1">Front desk selalu siap</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== 6. GALLERY SECTION ========== -->
+    <section id="gallery" class="py-20 lg:py-28 bg-dark-card/50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center animate-on-scroll mb-12">
+                <span class="text-primary font-medium text-sm uppercase tracking-widest">Galeri</span>
+                <h2 class="font-heading text-3xl sm:text-4xl font-bold text-white mt-3 mb-4">Lihat Lebih Dekat</h2>
+                <p class="text-slate-400 max-w-2xl mx-auto">Rasakan suasana Q Hotel Sangatta melalui galeri foto kami.</p>
+            </div>
+            <div class="grid grid-cols-2 md:grid-cols-3 gap-3 lg:gap-4">
+                <div class="animate-on-scroll row-span-2 rounded-2xl overflow-hidden">
+                    <img src="assets/images/hotel/exterior-2.jpg"
+                         alt="Q Hotel Exterior" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500" loading="lazy">
+                </div>
+                <div class="animate-on-scroll rounded-2xl overflow-hidden">
+                    <img src="assets/images/hotel/interior-1.jpg"
+                         alt="Hotel Lobby" class="w-full h-48 lg:h-56 object-cover hover:scale-105 transition-transform duration-500" loading="lazy">
+                </div>
+                <div class="animate-on-scroll rounded-2xl overflow-hidden">
+                    <img src="assets/images/hotel/room-4.jpg"
+                         alt="Hotel Room" class="w-full h-48 lg:h-56 object-cover hover:scale-105 transition-transform duration-500" loading="lazy">
+                </div>
+                <div class="animate-on-scroll rounded-2xl overflow-hidden">
+                    <img src="assets/images/hotel/facility-1.jpg"
+                         alt="Q Resto" class="w-full h-48 lg:h-56 object-cover hover:scale-105 transition-transform duration-500" loading="lazy">
+                </div>
+                <div class="animate-on-scroll rounded-2xl overflow-hidden">
+                    <img src="assets/images/hotel/interior-2.jpg"
+                         alt="Rooftop View" class="w-full h-48 lg:h-56 object-cover hover:scale-105 transition-transform duration-500" loading="lazy">
+                </div>
+                <div class="animate-on-scroll col-span-2 md:col-span-1 rounded-2xl overflow-hidden">
+                    <img src="assets/images/hotel/facility-2.jpg"
+                         alt="Meeting Room" class="w-full h-48 lg:h-56 object-cover hover:scale-105 transition-transform duration-500" loading="lazy">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== 7. TESTIMONIALS SECTION ========== -->
+    <section id="testimonials" class="py-20 lg:py-28">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center animate-on-scroll mb-12">
+                <span class="text-primary font-medium text-sm uppercase tracking-widest">Testimoni</span>
+                <h2 class="font-heading text-3xl sm:text-4xl font-bold text-white mt-3 mb-4">Apa Kata Tamu Kami</h2>
+                <p class="text-slate-400 max-w-2xl mx-auto">Review asli dari tamu yang sudah menginap di Q Hotel Sangatta.</p>
+            </div>
+            <div class="grid md:grid-cols-3 gap-6">
+                <!-- Review 1 -->
+                <div class="animate-on-scroll glass-card rounded-2xl p-6">
+                    <div class="flex items-center gap-1 mb-3">
+                        <i data-lucide="star" class="w-4 h-4 text-gold fill-gold"></i>
+                        <i data-lucide="star" class="w-4 h-4 text-gold fill-gold"></i>
+                        <i data-lucide="star" class="w-4 h-4 text-gold fill-gold"></i>
+                        <i data-lucide="star" class="w-4 h-4 text-gold fill-gold"></i>
+                        <i data-lucide="star" class="w-4 h-4 text-gold fill-gold"></i>
+                    </div>
+                    <h4 class="text-white font-semibold mb-2">"Best hotel in Sangatta"</h4>
+                    <p class="text-slate-400 text-sm leading-relaxed mb-4">
+                        "This is the first time I find a decent hotel in Sangatta. Quite modern, receptionist is kind. Price is reasonable. Located near city centre (Thomas Square)."
+                    </p>
+                    <div class="flex items-center gap-3 pt-4 border-t border-slate-700/30">
+                        <div class="w-10 h-10 bg-primary/20 rounded-full flex items-center justify-center">
+                            <span class="text-primary font-bold text-sm">T</span>
+                        </div>
+                        <div>
+                            <p class="text-white text-sm font-medium">Traveler</p>
+                            <p class="text-slate-500 text-xs flex items-center gap-1"><i data-lucide="globe" class="w-3 h-3"></i> TripAdvisor</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Review 2 -->
+                <div class="animate-on-scroll glass-card rounded-2xl p-6">
+                    <div class="flex items-center gap-1 mb-3">
+                        <i data-lucide="star" class="w-4 h-4 text-gold fill-gold"></i>
+                        <i data-lucide="star" class="w-4 h-4 text-gold fill-gold"></i>
+                        <i data-lucide="star" class="w-4 h-4 text-gold fill-gold"></i>
+                        <i data-lucide="star" class="w-4 h-4 text-gold fill-gold"></i>
+                        <i data-lucide="star" class="w-4 h-4 text-gold fill-gold"></i>
+                    </div>
+                    <h4 class="text-white font-semibold mb-2">"Little gems of Sangatta"</h4>
+                    <p class="text-slate-400 text-sm leading-relaxed mb-4">
+                        "The youngster has shown some better qualities in maintaining cleanliness, hospitality and sleep quality. The hotel attendants were equipped with good hospitality, young and energetic."
+                    </p>
+                    <div class="flex items-center gap-3 pt-4 border-t border-slate-700/30">
+                        <div class="w-10 h-10 bg-green-500/20 rounded-full flex items-center justify-center">
+                            <span class="text-green-400 font-bold text-sm">G</span>
+                        </div>
+                        <div>
+                            <p class="text-white text-sm font-medium">Guest</p>
+                            <p class="text-slate-500 text-xs flex items-center gap-1"><i data-lucide="globe" class="w-3 h-3"></i> TripAdvisor</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Review 3 -->
+                <div class="animate-on-scroll glass-card rounded-2xl p-6">
+                    <div class="flex items-center gap-1 mb-3">
+                        <i data-lucide="star" class="w-4 h-4 text-gold fill-gold"></i>
+                        <i data-lucide="star" class="w-4 h-4 text-gold fill-gold"></i>
+                        <i data-lucide="star" class="w-4 h-4 text-gold fill-gold"></i>
+                        <i data-lucide="star" class="w-4 h-4 text-gold fill-gold"></i>
+                        <i data-lucide="star" class="w-4 h-4 text-gold fill-gold"></i>
+                    </div>
+                    <h4 class="text-white font-semibold mb-2">"Hotel Rekomendasi di Sangatta"</h4>
+                    <p class="text-slate-400 text-sm leading-relaxed mb-4">
+                        "Hotel ini bersih, dilengkapi dengan semua yang dibutuhkan dan kamar berukuran cukup luas. Tempat tidurnya nyaman dan kamar mandi besar serta bersih. Cocok untuk business trip."
+                    </p>
+                    <div class="flex items-center gap-3 pt-4 border-t border-slate-700/30">
+                        <div class="w-10 h-10 bg-gold/20 rounded-full flex items-center justify-center">
+                            <span class="text-gold font-bold text-sm">B</span>
+                        </div>
+                        <div>
+                            <p class="text-white text-sm font-medium">Business Traveler</p>
+                            <p class="text-slate-500 text-xs flex items-center gap-1"><i data-lucide="globe" class="w-3 h-3"></i> TripAdvisor</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="animate-on-scroll mt-10 text-center">
+                <div class="inline-flex items-center gap-4 glass-card rounded-full px-8 py-4 flex-wrap justify-center">
+                    <div class="flex items-center gap-1">
+                        <i data-lucide="star" class="w-5 h-5 text-gold fill-gold"></i>
+                        <span class="text-white font-heading font-bold text-xl">8.9/10</span>
+                    </div>
+                    <span class="text-slate-400 hidden sm:inline">|</span>
+                    <span class="text-slate-300 text-sm">"Impressive" di Traveloka</span>
+                    <span class="text-slate-400 hidden sm:inline">|</span>
+                    <span class="text-slate-300 text-sm">41 Reviews</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== 8. LOCATION SECTION ========== -->
+    <section id="location" class="py-20 lg:py-28 bg-dark-card/50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center animate-on-scroll mb-12">
+                <span class="text-primary font-medium text-sm uppercase tracking-widest">Lokasi &amp; Kontak</span>
+                <h2 class="font-heading text-3xl sm:text-4xl font-bold text-white mt-3 mb-4">Temukan Kami</h2>
+            </div>
+            <div class="grid lg:grid-cols-2 gap-8">
+                <div class="animate-on-scroll rounded-2xl overflow-hidden h-80 lg:h-full min-h-[320px]">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.8!2d117.5280!3d0.4967!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x320a359ee88b5175%3A0x8b83c2b4bbd5bd60!2sQ%20Hotel!5e0!3m2!1sen!2sid!4v1708000000000"
+                        width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade" class="rounded-2xl"></iframe>
+                </div>
+                <div class="animate-on-scroll space-y-6">
+                    <div class="glass-card rounded-2xl p-6">
+                        <h3 class="font-heading font-semibold text-white text-lg mb-4">Informasi Kontak</h3>
+                        <div class="space-y-4">
+                            <div class="flex items-start gap-4">
+                                <div class="w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center flex-shrink-0">
+                                    <i data-lucide="map-pin" class="w-5 h-5 text-primary"></i>
+                                </div>
+                                <div>
+                                    <p class="text-white font-medium text-sm">Alamat</p>
+                                    <p class="text-slate-400 text-sm">Jl. Yos Sudarso II No. 17, Komplek Thomas Square Blok E-11, Sangatta Utara, Kutai Timur, Kaltim 75611</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start gap-4">
+                                <div class="w-10 h-10 bg-green-500/10 rounded-lg flex items-center justify-center flex-shrink-0">
+                                    <i data-lucide="message-circle" class="w-5 h-5 text-green-400"></i>
+                                </div>
+                                <div>
+                                    <p class="text-white font-medium text-sm">WhatsApp</p>
+                                    <a href="https://wa.me/6282310151555" target="_blank" rel="noopener" class="text-green-400 hover:text-green-300 text-sm transition-colors">0823-1015-1555</a>
+                                </div>
+                            </div>
+                            <div class="flex items-start gap-4">
+                                <div class="w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center flex-shrink-0">
+                                    <i data-lucide="phone" class="w-5 h-5 text-primary"></i>
+                                </div>
+                                <div>
+                                    <p class="text-white font-medium text-sm">Telepon</p>
+                                    <a href="tel:+6205492020991" class="text-slate-300 hover:text-white text-sm transition-colors">0549-2020991</a>
+                                </div>
+                            </div>
+                            <div class="flex items-start gap-4">
+                                <div class="w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center flex-shrink-0">
+                                    <i data-lucide="mail" class="w-5 h-5 text-primary"></i>
+                                </div>
+                                <div>
+                                    <p class="text-white font-medium text-sm">Email</p>
+                                    <a href="mailto:resv.qhotelsangatta@gmail.com" class="text-slate-300 hover:text-white text-sm transition-colors">resv.qhotelsangatta@gmail.com</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="glass-card rounded-2xl p-6">
+                        <h3 class="font-heading font-semibold text-white text-lg mb-4">Info Check-in</h3>
+                        <div class="grid grid-cols-2 gap-4">
+                            <div class="bg-dark-bg/50 rounded-xl p-4 text-center">
+                                <i data-lucide="log-in" class="w-6 h-6 text-primary mx-auto mb-2"></i>
+                                <p class="text-slate-400 text-xs">Check-in</p>
+                                <p class="text-white font-heading font-semibold">14:00</p>
+                            </div>
+                            <div class="bg-dark-bg/50 rounded-xl p-4 text-center">
+                                <i data-lucide="log-out" class="w-6 h-6 text-primary mx-auto mb-2"></i>
+                                <p class="text-slate-400 text-xs">Check-out</p>
+                                <p class="text-white font-heading font-semibold">12:00</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="glass-card rounded-2xl p-6">
+                        <h3 class="font-heading font-semibold text-white text-lg mb-4">Follow Kami</h3>
+                        <div class="flex gap-3">
+                            <a href="https://www.instagram.com/qhotelsangatta/" target="_blank" rel="noopener"
+                               class="w-12 h-12 bg-gradient-to-br from-purple-600 to-pink-500 rounded-xl flex items-center justify-center hover:opacity-80 transition-opacity">
+                                <i data-lucide="instagram" class="w-5 h-5 text-white"></i>
+                            </a>
+                            <a href="https://www.instagram.com/qresto.kitchen/" target="_blank" rel="noopener"
+                               class="w-12 h-12 bg-dark-bg/50 border border-slate-700/50 rounded-xl flex items-center justify-center hover:border-primary/50 transition-colors">
+                                <i data-lucide="utensils" class="w-5 h-5 text-slate-300"></i>
+                            </a>
+                            <a href="https://www.instagram.com/sixth.rooftop/" target="_blank" rel="noopener"
+                               class="w-12 h-12 bg-dark-bg/50 border border-slate-700/50 rounded-xl flex items-center justify-center hover:border-primary/50 transition-colors">
+                                <i data-lucide="wine" class="w-5 h-5 text-slate-300"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== 9. CTA SECTION ========== -->
+    <section id="booking" class="py-20 lg:py-28 relative overflow-hidden">
+        <div class="absolute inset-0 bg-gradient-to-br from-primary-dark via-primary to-blue-400 opacity-90"></div>
+        <div class="absolute inset-0 bg-[url('assets/images/hotel/exterior-3.jpg')] bg-cover bg-center opacity-10"></div>
+        <div class="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <div class="animate-on-scroll">
+                <h2 class="font-heading text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-4">
+                    Siap Merasakan Kenyamanan<br>di Q Hotel Sangatta?
+                </h2>
+                <p class="text-blue-100 text-lg mb-8 max-w-2xl mx-auto">
+                    Pesan sekarang dan nikmati pengalaman menginap terbaik di Sangatta. Harga mulai dari Rp 210.000/malam dengan sarapan gratis.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center mb-8">
+                    <a href="https://wa.me/6282310151555?text=Halo,%20saya%20ingin%20reservasi%20kamar%20di%20Q%20Hotel%20Sangatta" target="_blank" rel="noopener"
+                       class="inline-flex items-center justify-center gap-2 bg-green-600 hover:bg-green-700 text-white px-8 py-4 rounded-xl font-semibold text-lg transition-all hover:shadow-xl hover:-translate-y-0.5">
+                        <i data-lucide="message-circle" class="w-5 h-5"></i>
+                        Reservasi via WhatsApp
+                    </a>
+                    <a href="tel:+6205492020991"
+                       class="inline-flex items-center justify-center gap-2 bg-white/10 backdrop-blur hover:bg-white/20 text-white border border-white/30 px-8 py-4 rounded-xl font-semibold text-lg transition-all hover:-translate-y-0.5">
+                        <i data-lucide="phone" class="w-5 h-5"></i>
+                        Telepon Sekarang
+                    </a>
+                </div>
+                <p class="text-blue-200 text-sm mb-3">Atau pesan melalui:</p>
+                <div class="flex flex-wrap gap-3 justify-center">
+                    <a href="https://www.traveloka.com/id-id/hotel/africa/q-hotel-sangatta-9000007036999" target="_blank" rel="noopener"
+                       class="bg-white/10 backdrop-blur hover:bg-white/20 text-white px-5 py-2 rounded-full text-sm font-medium transition-all border border-white/20">Traveloka</a>
+                    <a href="https://www.tripadvisor.com/Hotel_Review-g3359503-d6903473-Reviews-QHotel_Sangata-Sengata_East_Kalimantan_Kalimantan.html" target="_blank" rel="noopener"
+                       class="bg-white/10 backdrop-blur hover:bg-white/20 text-white px-5 py-2 rounded-full text-sm font-medium transition-all border border-white/20">TripAdvisor</a>
+                    <a href="https://www.trip.com/hotels/bontang-hotel-detail-9031508/q-hotel-sangatta/" target="_blank" rel="noopener"
+                       class="bg-white/10 backdrop-blur hover:bg-white/20 text-white px-5 py-2 rounded-full text-sm font-medium transition-all border border-white/20">Trip.com</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== 10. FOOTER ========== -->
+    <footer class="bg-slate-950 py-12 lg:py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
+                <div class="lg:col-span-2">
+                    <div class="flex items-center gap-2 mb-4">
+                        <div class="w-10 h-10 bg-primary rounded-lg flex items-center justify-center">
+                            <span class="text-white font-heading font-bold text-xl">Q</span>
+                        </div>
+                        <div>
+                            <span class="text-white font-heading font-semibold text-lg">Q Hotel</span>
+                            <span class="text-slate-500 text-xs ml-1">Sangatta</span>
+                        </div>
+                    </div>
+                    <p class="text-slate-400 text-sm leading-relaxed max-w-sm mb-4">
+                        Hotel modern di jantung kota Sangatta. Dilengkapi Q Resto dan Sixth Rooftop Lounge untuk pengalaman menginap yang tak terlupakan.
+                    </p>
+                    <div class="flex gap-3">
+                        <a href="https://www.instagram.com/qhotelsangatta/" target="_blank" rel="noopener" class="w-9 h-9 bg-slate-800 hover:bg-primary rounded-lg flex items-center justify-center transition-colors">
+                            <i data-lucide="instagram" class="w-4 h-4 text-slate-400"></i>
+                        </a>
+                        <a href="https://wa.me/6282310151555" target="_blank" rel="noopener" class="w-9 h-9 bg-slate-800 hover:bg-green-600 rounded-lg flex items-center justify-center transition-colors">
+                            <i data-lucide="message-circle" class="w-4 h-4 text-slate-400"></i>
+                        </a>
+                        <a href="mailto:resv.qhotelsangatta@gmail.com" class="w-9 h-9 bg-slate-800 hover:bg-primary rounded-lg flex items-center justify-center transition-colors">
+                            <i data-lucide="mail" class="w-4 h-4 text-slate-400"></i>
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="text-white font-semibold mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#home" class="text-slate-400 hover:text-white text-sm transition-colors">Home</a></li>
+                        <li><a href="#rooms" class="text-slate-400 hover:text-white text-sm transition-colors">Kamar</a></li>
+                        <li><a href="#facilities" class="text-slate-400 hover:text-white text-sm transition-colors">Fasilitas</a></li>
+                        <li><a href="#gallery" class="text-slate-400 hover:text-white text-sm transition-colors">Galeri</a></li>
+                        <li><a href="#location" class="text-slate-400 hover:text-white text-sm transition-colors">Kontak</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-white font-semibold mb-4">Kontak</h4>
+                    <ul class="space-y-2">
+                        <li class="text-slate-400 text-sm">Jl. Yos Sudarso II No. 17</li>
+                        <li class="text-slate-400 text-sm">Thomas Square, Sangatta</li>
+                        <li class="text-slate-400 text-sm">Kutai Timur, Kaltim</li>
+                        <li><a href="tel:+6282310151555" class="text-slate-400 hover:text-white text-sm transition-colors">0823-1015-1555</a></li>
+                        <li><a href="mailto:resv.qhotelsangatta@gmail.com" class="text-slate-400 hover:text-white text-sm transition-colors">resv.qhotelsangatta@gmail.com</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-slate-800 pt-8 flex flex-col md:flex-row items-center justify-between gap-4">
+                <p class="text-slate-500 text-sm">&copy; 2026 Q Hotel Sangatta. All rights reserved.</p>
+                <p class="text-slate-600 text-sm">Website Preview by <a href="https://alurweb.com" target="_blank" rel="noopener" class="text-primary hover:text-primary-light transition-colors font-medium">ALURWEB</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/6282310151555?text=Halo,%20saya%20ingin%20bertanya%20tentang%20Q%20Hotel%20Sangatta" target="_blank" rel="noopener"
+       class="fixed bottom-6 right-6 z-40 bg-green-600 hover:bg-green-700 text-white w-14 h-14 rounded-full flex items-center justify-center shadow-lg shadow-green-600/30 hover:shadow-xl hover:shadow-green-600/40 transition-all hover:-translate-y-1 group">
+        <i data-lucide="message-circle" class="w-6 h-6"></i>
+        <span class="absolute right-full mr-3 bg-dark-card text-white text-sm px-4 py-2 rounded-lg whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity shadow-lg pointer-events-none">
+            Chat via WhatsApp
+        </span>
+    </a>
+
+    <script src="js/main.js"></script>
+    <script>lucide.createIcons();</script>
+</body>
+</html>
