@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+
+<html class="light" lang="id"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Geuliz Salon &amp; Spa | Pesona Kecantikan Sejati di Sangatta</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#17bfcf",
+                        "background-light": "#f6f8f8",
+                        "background-dark": "#112021",
+                        "accent-gold": "#d4af37",
+                        "soft-beige": "#fdfaf1"
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        body { font-family: 'Inter', sans-serif; }
+        .masonry-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            grid-auto-rows: 200px;
+            gap: 1rem;
+        }
+        .masonry-item-tall { grid-row: span 2; }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 font-display">
+<!-- Top Navigation Bar -->
+<nav class="sticky top-0 z-50 w-full bg-white/80 dark:bg-background-dark/80 backdrop-blur-md border-b border-primary/10">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="flex justify-between h-20 items-center">
+<div class="flex items-center gap-2">
+<div class="text-primary size-8">
+<svg fill="none" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path d="M13.8261 30.5736C16.7203 29.8826 20.2244 29.4783 24 29.4783C27.7756 29.4783 31.2797 29.8826 34.1739 30.5736C36.9144 31.2278 39.9967 32.7669 41.3563 33.8352L24.8486 7.36089C24.4571 6.73303 23.5429 6.73303 23.1514 7.36089L6.64374 33.8352C8.00331 32.7669 11.0856 31.2278 13.8261 30.5736Z" fill="currentColor"></path>
+<path clip-rule="evenodd" d="M39.998 35.764C39.9944 35.7463 39.9875 35.7155 39.9748 35.6706C39.9436 35.5601 39.8949 35.4259 39.8346 35.2825C39.8168 35.2403 39.7989 35.1993 39.7813 35.1602C38.5103 34.2887 35.9788 33.0607 33.7095 32.5189C30.9875 31.8691 27.6413 31.4783 24 31.4783C20.3587 31.4783 17.0125 31.8691 14.2905 32.5189C12.0012 33.0654 9.44505 34.3104 8.18538 35.1832C8.17384 35.2075 8.16216 35.233 8.15052 35.2592C8.09919 35.3751 8.05721 35.4886 8.02977 35.589C8.00356 35.6848 8.00039 35.7333 8.00004 35.7388C8.00004 35.739 8 35.7393 8.00004 35.7388C8.00004 35.7641 8.0104 36.0767 8.68485 36.6314C9.34546 37.1746 10.4222 37.7531 11.9291 38.2772C14.9242 39.319 19.1919 40 24 40C28.8081 40 33.0758 39.319 36.0709 38.2772C37.5778 37.7531 38.6545 37.1746 39.3151 36.6314C39.9006 36.1499 39.9857 35.8511 39.998 35.764ZM4.95178 32.7688L21.4543 6.30267C22.6288 4.4191 25.3712 4.41909 26.5457 6.30267L43.0534 32.777C43.0709 32.8052 43.0878 32.8338 43.104 32.8629L41.3563 33.8352C43.104 32.8629 43.1038 32.8626 43.104 32.8629L43.1051 32.865L43.1065 32.8675L43.1101 32.8739L43.1199 32.8918C43.1276 32.906 43.1377 32.9246 43.1497 32.9473C43.1738 32.9925 43.2062 33.0545 43.244 33.1299C43.319 33.2792 43.4196 33.489 43.5217 33.7317C43.6901 34.1321 44 34.9311 44 35.7391C44 37.4427 43.003 38.7775 41.8558 39.7209C40.6947 40.6757 39.1354 41.4464 37.385 42.0552C33.8654 43.2794 29.133 44 24 44C18.867 44 14.1346 43.2794 10.615 42.0552C8.86463 41.4464 7.30529 40.6757 6.14419 39.7209C4.99695 38.7775 3.99999 37.4427 3.99999 35.7391C3.99999 34.8725 4.29264 34.0922 4.49321 33.6393C4.60375 33.3898 4.71348 33.1804 4.79687 33.0311C4.83898 32.9556 4.87547 32.8935 4.9035 32.8471C4.91754 32.8238 4.92954 32.8043 4.93916 32.7889L4.94662 32.777L4.95178 32.7688ZM35.9868 29.004L24 9.77997L12.0131 29.004C12.4661 28.8609 12.9179 28.7342 13.3617 28.6282C16.4281 27.8961 20.0901 27.4783 24 27.4783C27.9099 27.4783 31.5719 27.8961 34.6383 28.6282C35.082 28.7342 35.5339 28.8609 35.9868 29.004Z" fill="currentColor" fill-rule="evenodd"></path>
+</svg>
+</div>
+<span class="text-xl font-bold tracking-tight text-slate-900 dark:text-slate-100">Geuliz <span class="text-primary">Salon &amp; Spa</span></span>
+</div>
+<div class="hidden md:flex items-center space-x-8">
+<a class="text-sm font-medium hover:text-primary transition-colors" href="#about">Tentang Kami</a>
+<a class="text-sm font-medium hover:text-primary transition-colors" href="#services">Layanan</a>
+<a class="text-sm font-medium hover:text-primary transition-colors" href="#gallery">Galeri</a>
+<a class="text-sm font-medium hover:text-primary transition-colors" href="#contact">Kontak</a>
+<button class="bg-primary text-white px-6 py-2.5 rounded-lg text-sm font-bold hover:bg-primary/90 transition-all shadow-lg shadow-primary/20">
+                        Booking Sekarang
+                    </button>
+</div>
+</div>
+</div>
+</nav>
+<!-- Hero Section -->
+<section class="relative h-[85vh] flex items-center overflow-hidden">
+<div class="absolute inset-0 z-0">
+<div class="absolute inset-0 bg-gradient-to-r from-black/70 via-black/40 to-transparent z-10"></div>
+<img alt="Serene Spa Environment" class="w-full h-full object-cover" data-alt="Luxurious serene spa environment with warm lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDDlY7y4xeYM9sEzuBh9wphYB4nyirtZJ5u8oNPR7vOU_zt-k5h6g78NXN9BD0X5UzQUYrGwvu0fQV034cYByAu8b_d5HHRbKoGW7WqwjLZ7uiulj9B58MNMIRTLtXRaY9ObeunwtYJSl8IOiX_qW9bO4CQ_4G8rQdF6BhaDy5SsZvmbO-YtWhqMKny6xFJC6UjtqlsHDw5PCeurAVQTliYYfjVxKdyb95M3WZGFIz9OXOmhsPEDPul6UhvR_D9bGx83XiX3aIhAFc"/>
+</div>
+<div class="relative z-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+<div class="max-w-2xl">
+<span class="inline-block px-3 py-1 rounded-full bg-primary/20 text-primary border border-primary/30 text-xs font-bold uppercase tracking-widest mb-4">Pusat Kecantikan Terbaik di Sangatta</span>
+<h1 class="text-5xl md:text-7xl font-black text-white leading-tight mb-6">
+                    Pesona Kecantikan <span class="text-primary">Sejati</span> di Sangatta
+                </h1>
+<p class="text-lg text-slate-200 mb-10 leading-relaxed max-w-xl">
+                    Rasakan perawatan kecantikan profesional dan layanan premium untuk memanjakan diri Anda dengan sentuhan tenaga ahli berpengalaman.
+                </p>
+<div class="flex flex-col sm:flex-row gap-4">
+<a class="flex items-center justify-center gap-2 bg-primary text-white px-8 py-4 rounded-lg font-bold hover:scale-105 transition-transform shadow-xl shadow-primary/30" href="https://wa.me/6282150413474">
+<span class="material-symbols-outlined">chat</span>
+                        Hubungi WhatsApp
+                    </a>
+<a class="flex items-center justify-center bg-white/10 backdrop-blur-sm border border-white/30 text-white px-8 py-4 rounded-lg font-bold hover:bg-white/20 transition-all" href="#services">
+                        Lihat Layanan
+                    </a>
+</div>
+</div>
+</div>
+</section>
+<!-- About Section -->
+<section class="py-24 bg-white dark:bg-background-dark overflow-hidden" id="about">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="grid lg:grid-cols-2 gap-16 items-center">
+<div class="relative">
+<div class="absolute -top-4 -left-4 w-64 h-64 bg-primary/10 rounded-full blur-3xl"></div>
+<div class="relative rounded-2xl overflow-hidden shadow-2xl">
+<img alt="Salon Interior" class="w-full h-[500px] object-cover" data-alt="Modern professional salon interior with sleek equipment" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCXMUJ1PG6XgoJl_dXjIzXlrbc7kTOAc4OMKU1m7woTgsZt0sQ8Z-fkYPgsp6qtirKabEK0f5kf3TI3eAI6LNt0gSxTqAHSIOCAsH-9V99Y185fyx_pdxS4r-iWNRd3ddZfhV7X0f8ca8AOdcSMeAiFiN5uGNaL18fb-hokgBQY3HmLQW-w-HIWZ_drbMRvSpy81Ci6hA8nH37fnOz3LaqlFbZfnh2pWk_z_Cc_7A9RExb3E7NBOuuisd8L_ihTecZdeLx439JYfMo"/>
+</div>
+<div class="absolute -bottom-8 -right-8 bg-primary p-8 rounded-2xl shadow-xl hidden md:block">
+<p class="text-white text-4xl font-black">10+</p>
+<p class="text-white/80 text-sm font-medium">Tahun Pengalaman</p>
+</div>
+</div>
+<div class="space-y-6">
+<div class="inline-flex items-center gap-2 text-primary font-bold tracking-wider uppercase text-sm">
+<span class="w-8 h-px bg-primary"></span>
+                        Tentang Geuliz
+                    </div>
+<h2 class="text-4xl font-bold text-slate-900 dark:text-slate-100 leading-tight">Dedikasi Untuk <span class="text-primary italic">Kecantikan</span> Anda</h2>
+<p class="text-slate-600 dark:text-slate-400 text-lg leading-relaxed">
+                        Geuliz Salon &amp; Spa hadir sebagai destinasi utama bagi Anda yang menginginkan perawatan kecantikan berkualitas tinggi di Sangatta. Kami mengutamakan kenyamanan dan hasil maksimal dengan tenaga ahli profesional yang terlatih.
+                    </p>
+<p class="text-slate-600 dark:text-slate-400 leading-relaxed">
+                        Misi kami adalah menyediakan layanan kecantikan premium yang terjangkau bagi seluruh masyarakat Sangatta dengan standar profesional. Kami percaya setiap individu layak mendapatkan momen relaksasi terbaik untuk meningkatkan rasa percaya diri.
+                    </p>
+<ul class="grid grid-cols-2 gap-4 pt-4">
+<li class="flex items-center gap-2 text-slate-700 dark:text-slate-300">
+<span class="material-symbols-outlined text-primary text-sm">check_circle</span> Produk Berkualitas
+                        </li>
+<li class="flex items-center gap-2 text-slate-700 dark:text-slate-300">
+<span class="material-symbols-outlined text-primary text-sm">check_circle</span> Terapis Ahli
+                        </li>
+<li class="flex items-center gap-2 text-slate-700 dark:text-slate-300">
+<span class="material-symbols-outlined text-primary text-sm">check_circle</span> Tempat Nyaman
+                        </li>
+<li class="flex items-center gap-2 text-slate-700 dark:text-slate-300">
+<span class="material-symbols-outlined text-primary text-sm">check_circle</span> Harga Kompetitif
+                        </li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+<!-- Services Section -->
+<section class="py-24 bg-background-light dark:bg-slate-900" id="services">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="text-center max-w-3xl mx-auto mb-16">
+<h2 class="text-3xl md:text-4xl font-bold mb-4">Layanan Unggulan Kami</h2>
+<p class="text-slate-600 dark:text-slate-400">Pilih dari berbagai kategori perawatan yang dirancang khusus untuk memenuhi kebutuhan kecantikan dan relaksasi Anda.</p>
+</div>
+<div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+<!-- Hair Treatment -->
+<div class="group bg-white dark:bg-background-dark p-2 rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 border border-slate-100 dark:border-slate-800">
+<div class="aspect-square rounded-xl overflow-hidden mb-6">
+<img alt="Hair Treatment" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" data-alt="Stylist cutting hair in a modern salon" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAS-PXLj_x4QlT-jkEgjBCnWZFqytiiuV3XpmIeUYvMFyeemCa5VE-1WkNzSOd_7ttCwNnKFaK6iGdwu-iWErFziIGCJ1bAypfN6Y4kwk4lWNsBPHNWyn_M4ej26JAv_rsSujGIH81XBx1dZu75DswDx6pkVyylkIAhUKbpYI10CynKG8XwhssERntzz0Hvvtuw6OwTLN4MBniu4tM8ay-r86Lyu3JppV88itZM-Hikis6PXr-1vNvaIRSsrFNGohPpIIfUTvqHfvc"/>
+</div>
+<div class="p-4">
+<h3 class="text-xl font-bold mb-2">Hair Treatment</h3>
+<p class="text-slate-600 dark:text-slate-400 text-sm mb-6 line-clamp-2">Perawatan rambut mulai dari cutting, coloring, hingga creambath berkualitas.</p>
+<button class="w-full py-3 rounded-lg border border-primary text-primary font-bold hover:bg-primary hover:text-white transition-colors">Lihat Detail</button>
+</div>
+</div>
+<!-- Facial & Spa -->
+<div class="group bg-white dark:bg-background-dark p-2 rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 border border-slate-100 dark:border-slate-800">
+<div class="aspect-square rounded-xl overflow-hidden mb-6">
+<img alt="Facial and Spa" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" data-alt="Client receiving a facial massage treatment" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBi5YedBdlekLR-NAkyTovG0Ab9oAvHp9JpgwjycYxVHkLibAvme3vehIsz-HPr_icMayl0eWVOnr4i_ivlmVYNiRs32_rKDHdv30XYkE1BxYCirOnbLl5AXq6v5mSdYEfnPCkEc0Md8Ms5Ksh4WzfL9Di3KimmF_U74tui46lhUmqoQSSsxoK2d2QQ3iGW_D2plx3w5SowORZWWMh7Sa8Dui2DMAOrJHsFGwzmnC97qOP78bkCFgXW-0Bs4WTNxNQa4b_-jNgvVOE"/>
+</div>
+<div class="p-4">
+<h3 class="text-xl font-bold mb-2">Facial &amp; Spa</h3>
+<p class="text-slate-600 dark:text-slate-400 text-sm mb-6 line-clamp-2">Rejuvenasi kulit wajah dan pijat relaksasi tubuh untuk kesegaran total.</p>
+<button class="w-full py-3 rounded-lg border border-primary text-primary font-bold hover:bg-primary hover:text-white transition-colors">Lihat Detail</button>
+</div>
+</div>
+<!-- Manicure & Pedicure -->
+<div class="group bg-white dark:bg-background-dark p-2 rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 border border-slate-100 dark:border-slate-800">
+<div class="aspect-square rounded-xl overflow-hidden mb-6">
+<img alt="Manicure and Pedicure" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" data-alt="Close up of professional manicure nail art" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBOe1lxRs8DBLwxMtdjnAxUyPyUClOf1UEAre_6RG9DLaqb7oWxqGherOL82o7uQ1qvkJlYxDMDw9LWTQe9Qs6mghXX9fdgnROM8GxA5FoejD7eaanrxnv6XppZHvr_qC2C6XPs5fvX1WZV9aW-43OZFqFRV1poJUrTa6g8ETEzS3nABq30qxNLQ8EXgjqwC8B4NKJP1noZqt5L25sDPKnlLfRuAQL_8clnk-RxBKPkhOekTO7Q6buN7sUAxEHAMtPeHQHuWKIVMqw"/>
+</div>
+<div class="p-4">
+<h3 class="text-xl font-bold mb-2">Mani &amp; Pedi</h3>
+<p class="text-slate-600 dark:text-slate-400 text-sm mb-6 line-clamp-2">Perawatan kuku tangan dan kaki lengkap dengan nail art yang elegan.</p>
+<button class="w-full py-3 rounded-lg border border-primary text-primary font-bold hover:bg-primary hover:text-white transition-colors">Lihat Detail</button>
+</div>
+</div>
+<!-- Bridal Makeup -->
+<div class="group bg-white dark:bg-background-dark p-2 rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 border border-slate-100 dark:border-slate-800">
+<div class="aspect-square rounded-xl overflow-hidden mb-6">
+<img alt="Bridal Makeup" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" data-alt="Professional bridal makeup session" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDdM-dQYu3HOiVTLbBB10i2_lIGUXPpdy4libGLc8sAcwde2KkSO4_Ndxsy-5aQAKwANfC3i7FxMqZuINhqmGEf50NQsRJTbzyE9ECvIWLS4U-wLAZ3C1E8sqY6p_fFL8168Qpl9-ZpHEF3Fwzqg5yJLz_kHNlfZR8EDdqvd3W7IVK33cpF4SVqLSLdUmBHP4cf8HMITGm83LgEgFc4jMDyRV0o2eo6w92oSsNs_y5unUOV1VKBxp_1_sFAbMY3Y5JDLmTZVX4h-xI"/>
+</div>
+<div class="p-4">
+<h3 class="text-xl font-bold mb-2">Bridal Makeup</h3>
+<p class="text-slate-600 dark:text-slate-400 text-sm mb-6 line-clamp-2">Riasan pengantin profesional untuk hari istimewa Anda yang tak terlupakan.</p>
+<button class="w-full py-3 rounded-lg border border-primary text-primary font-bold hover:bg-primary hover:text-white transition-colors">Lihat Detail</button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Gallery & Testimonials -->
+<section class="py-24 bg-white dark:bg-background-dark" id="gallery">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="grid lg:grid-cols-12 gap-12">
+<!-- Gallery -->
+<div class="lg:col-span-7">
+<h2 class="text-3xl font-bold mb-8 italic">Momen Bahagia di Geuliz</h2>
+<div class="masonry-grid">
+<div class="masonry-item-tall rounded-xl overflow-hidden shadow-lg border-2 border-primary/5">
+<img alt="Gallery 1" class="w-full h-full object-cover" data-alt="Happy client after a haircut" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCmd2tc9hLCg_yun6IcUEYFyx65lox1zkfXHiHLDYuin_ZBk_680TvjSzGQ0ybrEszDC94ghGd2Tu3PSey0e67CeryFlpGdVoBWJumnQdLpBOWMALknAvb-1NiqZ7waupN-FCp5IMebRUTe1RhopEBsJIvobN0c1kAeA0kViaC9D2hFg-pDeMJFgteXJDi4snyYNmAWncNZ1CBh3Yrki-KI1FEgdX8C5nG-NsNJvE-liAEwvX0iUIOr-281r8GaNSvyoeCSJHmkPL4"/>
+</div>
+<div class="rounded-xl overflow-hidden shadow-lg border-2 border-primary/5">
+<img alt="Gallery 2" class="w-full h-full object-cover" data-alt="Nail polish collection" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB5pmpBg92ZCKgx5-jrXwGIKeB6plA2HJc6q0z60v6jYc4qFabudiw0n7uzx7QAP6-Z5sZ1gKmcsYGEjP9xVvI2oF-ffSrMgRveuJUjNdbodU9De8WXl-xoL-OI80sOJrisDK4qV5FQQNI4ybpbRP9E_t10fBRBnoP4hdv6IjeqnSAYRUkU9hbFYhqLsZGuJtD2C3bprF1eQP5Gq62E-eFXT_DSw6FgREneEiuzxvHIeW_MaK5jVcoojaVBGzv1YPw-w4w86EW2OPI"/>
+</div>
+<div class="rounded-xl overflow-hidden shadow-lg border-2 border-primary/5">
+<img alt="Gallery 3" class="w-full h-full object-cover" data-alt="Face mask application" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAAqoAH0l0XgSSX0EHvM5CM359mZ-0Af7_oXRMB7OiuV2PfD9jPtWgIZpFL7z8t0cr5id9O1ko2oxXjfAZZRoQ2n1FgShMdUbH5Ly1dCK6jm_Au4bxvnlCu2JFaMFqrikk7ntWLle_qJTYDA0K4g5f_Wym83aUD7mtdJQ-IzGxldzRY3vfcp2yURVxUm-u6MCqDykpls8KWaY_jVVmcza2v_CczvsSdzsie5LwLYOhOnLagliXKikVDAw3mQhjfIkLYrNNIBQdOLa8"/>
+</div>
+<div class="masonry-item-tall rounded-xl overflow-hidden shadow-lg border-2 border-primary/5">
+<img alt="Gallery 4" class="w-full h-full object-cover" data-alt="Calm massage room setup" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBOG1k-7yYYKBSsETAvkWcLMbylKIeivnxhxTrptsvQw7_OKHiAQepBPTp8m-qbZLVFQ98PupZPmtTbPaWP4Md2izJVvva-ibmHq6WVdcCI4gyemt4g5SG5UcQ8x8A7RyYe9vDqbhRKoAx__el-9_IvyGvQHx2UTb5Xks05AR-tAIaYthjDXNJc2eDURE9YswZNo7Wo-sdssdlSqS7Iae9b6mnnOwHEO_v3yjkoya1QjcCLC-gQbOH6Pc0_4SPd7vVWPyapxy9VqqY"/>
+</div>
+</div>
+</div>
+<!-- Testimonials -->
+<div class="lg:col-span-5 flex flex-col justify-center">
+<div class="bg-soft-beige dark:bg-slate-800 p-10 rounded-3xl relative">
+<span class="material-symbols-outlined text-6xl text-primary/20 absolute top-4 left-4">format_quote</span>
+<div class="relative z-10">
+<div class="flex gap-1 text-accent-gold mb-6">
+<span class="material-symbols-outlined fill-1">star</span>
+<span class="material-symbols-outlined fill-1">star</span>
+<span class="material-symbols-outlined fill-1">star</span>
+<span class="material-symbols-outlined fill-1">star</span>
+<span class="material-symbols-outlined fill-1">star</span>
+</div>
+<p class="text-xl italic text-slate-700 dark:text-slate-300 leading-relaxed mb-8">
+                                "Sangat puas dengan layanan facial di Geuliz. Terapisnya ramah, tempatnya bersih dan sangat tenang. Hasilnya wajah jadi glowing seketika. Recommended banget buat warga Sangatta!"
+                            </p>
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-full bg-primary/30 flex items-center justify-center font-bold text-primary">S</div>
+<div>
+<h4 class="font-bold">Siti Aminah</h4>
+<p class="text-sm text-slate-500">Pelanggan Setia</p>
+</div>
+</div>
+</div>
+<div class="flex gap-2 mt-10">
+<button class="w-10 h-10 rounded-full border border-primary/20 flex items-center justify-center text-primary hover:bg-primary hover:text-white transition-colors">
+<span class="material-symbols-outlined">chevron_left</span>
+</button>
+<button class="w-10 h-10 rounded-full bg-primary flex items-center justify-center text-white shadow-lg shadow-primary/30">
+<span class="material-symbols-outlined">chevron_right</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Location & Contact -->
+<section class="py-24 bg-background-light dark:bg-background-dark" id="contact">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="grid lg:grid-cols-2 gap-16">
+<div>
+<h2 class="text-3xl font-bold mb-8">Kunjungi Kami</h2>
+<div class="space-y-8">
+<div class="flex gap-4">
+<div class="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center text-primary shrink-0">
+<span class="material-symbols-outlined">location_on</span>
+</div>
+<div>
+<h4 class="font-bold text-lg mb-1">Alamat</h4>
+<p class="text-slate-600 dark:text-slate-400">Jl. Yos Sudarso No. 45, Sangatta Utara, Kutai Timur, Kalimantan Timur</p>
+</div>
+</div>
+<div class="flex gap-4">
+<div class="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center text-primary shrink-0">
+<span class="material-symbols-outlined">call</span>
+</div>
+<div>
+<h4 class="font-bold text-lg mb-1">WhatsApp</h4>
+<p class="text-slate-600 dark:text-slate-400">+62 821-5041-3474</p>
+</div>
+</div>
+<div class="flex gap-4">
+<div class="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center text-primary shrink-0">
+<span class="material-symbols-outlined">schedule</span>
+</div>
+<div>
+<h4 class="font-bold text-lg mb-1">Jam Operasional</h4>
+<p class="text-slate-600 dark:text-slate-400">Senin - Minggu: 09:00 - 20:00 WITA</p>
+</div>
+</div>
+</div>
+<div class="mt-12 p-6 bg-white dark:bg-slate-800 rounded-2xl border border-slate-100 dark:border-slate-700">
+<h4 class="font-bold mb-4">Ikuti Kami</h4>
+<div class="flex gap-4">
+<a class="w-10 h-10 rounded-lg bg-slate-100 dark:bg-slate-700 flex items-center justify-center hover:bg-primary hover:text-white transition-all" href="#">
+<svg class="w-5 h-5 fill-current" viewbox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.791-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.209-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"></path></svg>
+</a>
+<a class="w-10 h-10 rounded-lg bg-slate-100 dark:bg-slate-700 flex items-center justify-center hover:bg-primary hover:text-white transition-all" href="#">
+<svg class="w-5 h-5 fill-current" viewbox="0 0 24 24"><path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 4-8 4z"></path></svg>
+</a>
+</div>
+</div>
+</div>
+<div class="rounded-3xl overflow-hidden shadow-2xl border-8 border-white dark:border-slate-800 h-[450px] relative">
+<img alt="Map" class="w-full h-full object-cover" data-alt="Map location of the salon in Sangatta city" data-location="Sangatta, Kutai Timur" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCN_wzoVNX-a6HyWHz6JNj8TTsfQe3rog-nmZLB_fdC4tOh3X3nIZl6QgVHBLCyKx6RNfW1tktvhqtUXKMRynZCHwy31psovF8NdjBGENKmeCR-zf9BEwSk6YB4H5gvsX3urlmZ2q9q581SRlzpGMY8Q_sdHDpRGZI45cPqzznGJMIitjZdA8hNXeE8jN7ZHDFWYjrk-0mDpx-7xX_IpIEqOkvh2bB06x_uFLyLiddS6GrRo1g8R-U386oo7S_G7-uOl36iKUZDNwA"/>
+<div class="absolute inset-0 flex items-center justify-center bg-slate-900/10 pointer-events-none">
+<div class="bg-white dark:bg-slate-800 p-4 rounded-xl shadow-xl flex flex-col items-center">
+<span class="material-symbols-outlined text-primary text-4xl mb-2">location_on</span>
+<span class="font-bold text-xs uppercase tracking-widest">Geuliz Salon</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Final CTA Banner -->
+<section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-[-80px] relative z-20">
+<div class="bg-gradient-to-r from-primary to-[#0ea5b9] rounded-[2rem] p-12 md:p-16 text-center text-white shadow-2xl shadow-primary/40">
+<h2 class="text-3xl md:text-4xl font-black mb-6">Booking Jadwal Anda Sekarang</h2>
+<p class="text-white/80 text-lg mb-10 max-w-2xl mx-auto">Jangan tunda momen relaksasi Anda. Klik tombol di bawah untuk reservasi melalui WhatsApp dengan admin kami.</p>
+<a class="inline-flex items-center gap-3 bg-white text-primary px-10 py-5 rounded-xl font-black text-lg hover:scale-105 transition-transform shadow-xl" href="https://wa.me/6282150413474">
+<span class="material-symbols-outlined">chat</span>
+                Reservasi via WhatsApp
+            </a>
+</div>
+</section>
+<!-- Footer -->
+<footer class="bg-slate-900 dark:bg-background-dark pt-40 pb-10 text-slate-400">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="grid md:grid-cols-4 gap-12 mb-16">
+<div class="col-span-2">
+<div class="flex items-center gap-2 mb-6">
+<div class="text-primary size-8">
+<svg fill="none" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path d="M13.8261 30.5736C16.7203 29.8826 20.2244 29.4783 24 29.4783C27.7756 29.4783 31.2797 29.8826 34.1739 30.5736C36.9144 31.2278 39.9967 32.7669 41.3563 33.8352L24.8486 7.36089C24.4571 6.73303 23.5429 6.73303 23.1514 7.36089L6.64374 33.8352C8.00331 32.7669 11.0856 31.2278 13.8261 30.5736Z" fill="currentColor"></path>
+<path clip-rule="evenodd" d="M39.998 35.764C39.9944 35.7463 39.9875 35.7155 39.9748 35.6706C39.9436 35.5601 39.8949 35.4259 39.8346 35.2825C39.8168 35.2403 39.7989 35.1993 39.7813 35.1602C38.5103 34.2887 35.9788 33.0607 33.7095 32.5189C30.9875 31.8691 27.6413 31.4783 24 31.4783C20.3587 31.4783 17.0125 31.8691 14.2905 32.5189C12.0012 33.0654 9.44505 34.3104 8.18538 35.1832C8.17384 35.2075 8.16216 35.233 8.15052 35.2592C8.09919 35.3751 8.05721 35.4886 8.02977 35.589C8.00356 35.6848 8.00039 35.7333 8.00004 35.7388C8.00004 35.739 8 35.7393 8.00004 35.7388C8.00004 35.7641 8.0104 36.0767 8.68485 36.6314C9.34546 37.1746 10.4222 37.7531 11.9291 38.2772C14.9242 39.319 19.1919 40 24 40C28.8081 40 33.0758 39.319 36.0709 38.2772C37.5778 37.7531 38.6545 37.1746 39.3151 36.6314C39.9006 36.1499 39.9857 35.8511 39.998 35.764ZM4.95178 32.7688L21.4543 6.30267C22.6288 4.4191 25.3712 4.41909 26.5457 6.30267L43.0534 32.777C43.0709 32.8052 43.0878 32.8338 43.104 32.8629L41.3563 33.8352C43.104 32.8629 43.1038 32.8626 43.104 32.8629L43.1051 32.865L43.1065 32.8675L43.1101 32.8739L43.1199 32.8918C43.1276 32.906 43.1377 32.9246 43.1497 32.9473C43.1738 32.9925 43.2062 33.0545 43.244 33.1299C43.319 33.2792 43.4196 33.489 43.5217 33.7317C43.6901 34.1321 44 34.9311 44 35.7391C44 37.4427 43.003 38.7775 41.8558 39.7209C40.6947 40.6757 39.1354 41.4464 37.385 42.0552C33.8654 43.2794 29.133 44 24 44C18.867 44 14.1346 43.2794 10.615 42.0552C8.86463 41.4464 7.30529 40.6757 6.14419 39.7209C4.99695 38.7775 3.99999 37.4427 3.99999 35.7391C3.99999 34.8725 4.29264 34.0922 4.49321 33.6393C4.60375 33.3898 4.71348 33.1804 4.79687 33.0311C4.83898 32.9556 4.87547 32.8935 4.9035 32.8471C4.91754 32.8238 4.92954 32.8043 4.93916 32.7889L4.94662 32.777L4.95178 32.7688ZM35.9868 29.004L24 9.77997L12.0131 29.004C12.4661 28.8609 12.9179 28.7342 13.3617 28.6282C16.4281 27.8961 20.0901 27.4783 24 27.4783C27.9099 27.4783 31.5719 27.8961 34.6383 28.6282C35.082 28.7342 35.5339 28.8609 35.9868 29.004Z" fill="currentColor" fill-rule="evenodd"></path>
+</svg>
+</div>
+<span class="text-xl font-bold tracking-tight text-white">Geuliz Salon &amp; Spa</span>
+</div>
+<p class="max-w-md">Layanan kecantikan profesional di Sangatta dengan mengedepankan kualitas dan kenyamanan pelanggan untuk hasil yang maksimal.</p>
+</div>
+<div>
+<h4 class="text-white font-bold mb-6">Navigasi</h4>
+<ul class="space-y-4">
+<li><a class="hover:text-primary transition-colors" href="#">Beranda</a></li>
+<li><a class="hover:text-primary transition-colors" href="#about">Tentang Kami</a></li>
+<li><a class="hover:text-primary transition-colors" href="#services">Layanan</a></li>
+<li><a class="hover:text-primary transition-colors" href="#contact">Kontak</a></li>
+</ul>
+</div>
+<div>
+<h4 class="text-white font-bold mb-6">Kontak</h4>
+<ul class="space-y-4">
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-sm">mail</span> geuliz.spa@gmail.com</li>
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-sm">call</span> +62 821-5041-3474</li>
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-sm">location_on</span> Sangatta, Kutai Timur</li>
+</ul>
+</div>
+</div>
+<div class="pt-10 border-t border-slate-800 flex flex-col md:flex-row justify-between items-center gap-4 text-sm">
+<p>© 2024 Geuliz Salon &amp; Spa. All rights reserved.</p>
+<div class="flex gap-6">
+<a class="hover:text-white transition-colors" href="#">Privacy Policy</a>
+<a class="hover:text-white transition-colors" href="#">Terms of Service</a>
+</div>
+</div>
+</div>
+</footer>
+<!-- Floating WA Button -->
+<a class="fixed bottom-8 right-8 z-[100] bg-[#25D366] text-white p-4 rounded-full shadow-2xl hover:scale-110 transition-transform flex items-center justify-center animate-bounce" href="https://wa.me/6282150413474">
+<svg class="w-8 h-8 fill-current" viewbox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"></path></svg>
+</a>
+</body></html>
